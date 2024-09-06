@@ -1,0 +1,33 @@
+// Flexbox Centering
+@mixin flex-center($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+  }
+  
+  // Sticky Header
+  @mixin sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  // Dark Theme
+  @mixin dark-theme($background-color, $text-color: #ffffff) {
+    @media (prefers-color-scheme: dark) {
+      background-color: $background-color;
+      color: $text-color;
+    }
+  }
+  
+  // Gradient Background for Hero Section
+  @mixin hero-gradient-background {
+    background: radial-gradient(
+      circle at bottom center,
+      $gradient-start 0%,
+      $gradient-middle 50%,
+      $gradient-end 100%
+    );
+  }
+  
+  //Nested items in Hero-Section

@@ -1,6 +1,173 @@
-$text-color: blue;
+/*Search queries*/ /*
+*Universal Styles              Top Header Styles             Hero section styles
 
 
-body{
-    background-color: $text-color;
+*/ /*
+
+Description:
+- Mobile first
+
+*/
+
+// Import variables and mixins
+@import 'variables';
+@import 'mixins';
+@import 'functions';
+
+/***********************************************/
+/***************Universal Styles
+***********************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/***********************************************/
+/***************Top Header styles
+***********************************************/
+#top-header {
+  width: 100%;
+  height: $header-height;
+  background-color: $light-background;
+  @include sticky-header;
+
+  // Dark theme for top header
+//   @include dark-theme($dark-background);
+}
+
+.wrapper {
+  @include flex-center(space-between, center);
+  padding: 0 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  max-height: $header-height;
+}
+
+#left-side-header {
+  @include flex-center(row);
+}
+
+#right-side-header {
+  @include flex-center(row);
+  gap: 16px;
+  padding: 16px;
+}
+
+#logo-name {
+  margin-left: 7px;
+  font-size: 20.8px;
+  font-weight: 800;
+  font-family: $font-family;
+}
+
+/********Toggle / Switch********/
+.toggle-switch {
+  width: $toggle-switch-width;
+  height: $toggle-switch-height;
+  background-color: #9397ad;
+  border-radius: 25px;
+  position: relative;
+  box-shadow: 0px 8px 18px -8px rgba($primary-color, 0.9);
+  cursor: pointer;
+}
+
+.toggle-knob {
+  width: $toggle-knob-diameter;
+  height: $toggle-knob-diameter;
+  background-color: $light-background;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: left 0.3s ease;
+}
+
+.toggle-switch.active .toggle-knob {
+  left: 24px;
+}
+
+/***Menu button Mobile***/
+.hamburger-menu {
+    width: 30px;
+    height: 36px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hamburger-menu span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #333;
+  }
+  
+  .hamburger-menu span:first-child {
+    margin-top: 6px;
+  }
+  
+  .hamburger-menu span:nth-child(2) {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+  
+  .hamburger-menu span:last-child {
+    margin-bottom: 6px;
+  }
+  
+
+/***********************************************/
+/***************Hero section styles
+***********************************************/
+.hero-section {
+  background: $light-background;
+  height: 499px;
+  font-family: $font-family;
+
+//@include dark-theme($dark-background);
+  @include hero-gradient-background;
+
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 33px;
+
+
+    //////Nested
+    * {
+ 
+    justify-self: center;
+    align-self: center;   
+      
+    width: 100%;         
+    text-align: center;   
+  }
+  *:first-child{
+    max-width: 300px;   
+  }
+  *:nth-child(2){
+    max-width: 361.41px;
+  }
+   h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+    font-weight: 700;
+    font-size: 34.1px;
+      
+   }
+   p{
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+   
+    font-size: 18px;
+    color: #585C7B;
+    line-height: 1.288;
+    height: 115.2px;
+   }
+}
+
