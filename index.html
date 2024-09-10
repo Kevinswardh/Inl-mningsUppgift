@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap" rel="stylesheet">
+   
 </head>
 <body>
-    <header id="top-header">
-        <div class="wrapper">
-            <div id="left-side-header">
-                <div style="padding: 4px;">
-                    <svg width="47" height="44" viewBox="0 0 47 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<header id="top-header">
+    <div class="wrapper">
+        <div id="left-side-header">
+            <div style="padding: 4px;">
+                <svg width="47" height="44" viewBox="0 0 47 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_20005128_13053)">
                     <g clip-path="url(#clip1_20005128_13053)">
                     <g clip-path="url(#clip2_20005128_13053)">
@@ -81,24 +81,28 @@
                     <rect width="47" height="44" fill="white"/>
                 </clipPath>
             </defs>
-        </svg>
+                </svg>
+            </div>
+            <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                <p id="logo-name">Silicon</p>
+                <p id="features">Features</p>
+            </div>
+            
+            
+        </div>
+        <div id="right-side-header">
+            <p class="dark-mode-text">Dark Mode</p>    
+            <label class="toggle-switch">
+                <input type="checkbox">
+                <div class="toggle-knob"></div>
+            </label>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </div>
-    <div>
-        <p id="logo-name">Silicon</p>
-    </div>
-</div>
-<div id="right-side-header">
-    <div class="toggle-switch">
-        <div class="toggle-knob"></div>
-    </div>
-    <div class="hamburger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    
-</div>
-</div>
 </header>
 <section class="hero-section">
           <h1>Manage All Your Money in one App</h1>
@@ -107,7 +111,15 @@
           </p>
           <button class="download-btn">
              <div>
-                <div></div><!--Apple icon-->
+                <div>
+                    <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.26604 4.58035C6.26857 3.39555 6.90654 1.75505 6.72426 0.023407C5.26604 0.114546 3.5344 1.02593 2.44073 2.21074C1.52934 3.21327 0.709093 4.94491 0.891371 6.58541C2.53187 6.67655 4.26351 5.76516 5.26604 4.58035Z" fill="white"/>
+                        </svg>
+                        
+                    <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.9116 9.06133C19.9116 5.50691 22.9191 3.77528 23.0103 3.68414C21.2786 1.22339 18.6356 0.949971 17.7242 0.858832C15.5369 0.585415 13.3496 2.13478 12.1648 2.13478C10.9799 2.13478 9.24831 0.858832 7.33439 0.858832C4.87364 0.858832 2.59517 2.22591 1.41036 4.41325C-1.14153 8.78791 0.77239 15.1676 3.23314 18.6309C4.50909 20.3626 5.87617 22.2765 7.79009 22.1853C9.61286 22.0942 10.342 21.0005 12.5293 21.0005C14.7166 21.0005 15.3546 22.1853 17.2685 22.0942C19.2736 22.0942 20.4584 20.3626 21.6432 18.6309C23.1014 16.6259 23.6483 14.7119 23.6483 14.6208C23.7394 14.7119 19.9116 13.3449 19.9116 9.06133Z" fill="white"/>
+                    </svg>
+                    </div><!--Apple icon-->
                 <div></div><!--Downlod on the-->
                 <div></div><!--App Store-->
              </div>

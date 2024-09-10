@@ -1,0 +1,19 @@
+/*******Dark mode text *****/
+.dark-mode-text{   //Must be in this partial
+    display: none;
+    color: #131022;
+    font-weight: 600;
+ 
+   }
+
+   
+//Tablets Selection Media
+@media screen and (min-width: 768px) {
+  .dark-mode-text{
+    display: block;
+  }
+  .toggle-switch{
+    margin-right: 60px;
+  }
+
+}

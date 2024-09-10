@@ -1,9 +1,16 @@
 // Flexbox Centering
-@mixin flex-center($justify: center, $align: center) {
+@mixin flex-center($centerJ: center, $centerA: center, $flex-dir: row){
     display: flex;
-    justify-content: $justify;
-    align-items: $align;
-  }
+    flex-direction: $flex-dir;
+    justify-content: $centerJ;
+    align-items: $centerA;
+    
+}
+@mixin flex-space-between($space-between: space-between, $center: center){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
   
   // Sticky Header
   @mixin sticky-header {

@@ -1,0 +1,18 @@
+#features{
+    display: none;
+    margin-left: rem(7);
+    font-size: rem(16);
+    font-weight: 400;
+    font-family: $font-family;
+    color: #33354D;
+    margin-top: 4.8px;
+    margin-left: 40px;
+  }
+
+
+  @media screen and (min-width: 1024px) {    
+        #features{
+            display: block;
+        }
+
+  }
