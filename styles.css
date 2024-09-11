@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Search queries*/ /*
 *Universal Styles              Top Header Styles             Hero section styles
 
@@ -22,6 +23,53 @@ Description:
   }
   .toggle-switch {
     margin-right: 60px;
+  }
+  .hero-section {
+    width: 100vw;
+    max-width: 100vw;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 200px;
+  }
+  .hero-section h1 {
+    grid-column: 2/4;
+    justify-self: center;
+    align-self: center;
+  }
+  .hero-section .hero-paragarph {
+    grid-column: 1/3;
+    grid-row: 2;
+    justify-self: start;
+    text-align: start;
+  }
+  .hero-section .d-btn-1 {
+    grid-row: 3;
+    grid-column: 1/2;
+    width: 170px;
+    justify-self: end;
+  }
+  .hero-section .d-btn-2 {
+    grid-row: 3;
+    grid-column: 2/3;
+    width: 170px;
+  }
+  .hero-section .discover-wrapper {
+    grid-row: 4;
+    grid-column: 1/2;
+    justify-self: end;
+    width: 180px;
+    margin-left: 10px;
+  }
+  .hero-section::before {
+    content: "";
+    background-image: url("Pictures/test.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-row: 2/6;
+    grid-column: 3/5;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
   }
 }
 #features {
@@ -93,7 +141,7 @@ Description:
   justify-content: row;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 /********Toggle / Switch********/
@@ -164,19 +212,22 @@ Description:
 ***********************************************/
 .hero-section {
   background: #ffffff;
-  height: 499px;
+  height: 100%;
   font-family: "Manrope", system-ui, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   background: radial-gradient(circle at bottom center, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 50%, rgba(19, 16, 34, 0.01) 100%);
   display: grid;
-  grid-template-rows: 88.76px 115.2px 50px 50px;
-  row-gap: 20px;
-  margin-top: 27.02px;
+  grid-template-rows: 88.76px 115.2px 50px 50px 70px;
+  gap: 20px;
+  padding-top: 27.02px;
 }
-.hero-section * {
+.hero-section h1, .hero-section .hero-paragarph {
   justify-self: center;
   align-self: center;
   width: 100%;
-  text-align: center;
 }
 .hero-section *:first-child {
   max-width: 300px;
@@ -189,10 +240,11 @@ Description:
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-weight: 700;
   font-size: 34.1px;
 }
-.hero-section p {
+.hero-section .hero-paragarph {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -203,7 +255,9 @@ Description:
   line-height: 1.288;
   height: 115.2px;
 }
-.hero-section button {
+
+/***Apple Button Self made***/
+.download-btn {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -213,4 +267,107 @@ Description:
   background-color: #131022;
   max-width: 366.4px;
   border-radius: 8px;
+}
+.download-btn .button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
+  flex-direction: row;
+}
+.download-btn .button-wrapper .icon-fix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 30px;
+}
+.download-btn .button-wrapper .icon-fix .apple-icon-top {
+  position: absolute;
+  top: -6px;
+  left: 2´0px;
+}
+.download-btn .button-wrapper .icon-fix .apple-icon {
+  position: relative;
+}
+.download-btn p {
+  color: white;
+}
+
+.download-text-apple-top {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif;
+  font-size: 11px;
+  height: -moz-fit-content;
+  height: fit-content;
+  letter-spacing: 1px;
+}
+
+.download-text-apple {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  height: -moz-fit-content;
+  height: fit-content;
+  letter-spacing: 1px;
+}
+
+/****Google button Ai-Generated with Builder.io Figma plugin****/
+.link-image {
+  margin-top: 4px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  width: 139px;
+  max-width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.discover-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+}
+
+.discover-button {
+  width: 44px;
+  height: 44px;
+  border: none;
+}
+
+@media screen and (min-width: 500px) {
+  .hero-section {
+    width: 100vw;
+    max-width: 100vw;
+  }
+  .hero-section > * {
+    transform: scale(1.05);
+  }
+}
+@media screen and (min-width: 600px) {
+  .hero-section {
+    width: 100vw;
+    max-width: 100vw;
+  }
+  .hero-section > * {
+    transform: scale(1.1);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-section > * {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=styles.css.map */
