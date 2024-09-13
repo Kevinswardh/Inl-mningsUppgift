@@ -18,6 +18,7 @@ Description:
   padding: 0;
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
+  transition: background-color 0.16s;
 }
 
 /***********************************************/
@@ -47,6 +48,16 @@ Description:
   flex-direction: row;
   justify-content: row;
   align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+#left-side-header:visited {
+  color: black;
 }
 
 #logo-name {
@@ -129,18 +140,29 @@ Description:
   margin-bottom: 6px;
 }
 
+.signin-btn-link {
+  display: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 /***********************************************/
 /***************Hero section styles
 ***********************************************/
+.background-widescreen-fixer-hero {
+  background: radial-gradient(circle at bottom center, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 50%, rgba(19, 16, 34, 0.01) 100%);
+  width: 100vw;
+  height: auto;
+}
+
 .hero-section {
-  background: #ffffff;
   height: 100%;
   font-family: "Manrope", system-ui, sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle at bottom center, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 50%, rgba(19, 16, 34, 0.01) 100%);
   padding-bottom: 10px;
   display: grid;
   grid-template-rows: auto;
@@ -184,6 +206,9 @@ Description:
   gap: 20px;
   align-items: center;
   justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .download-btn {
@@ -196,12 +221,13 @@ Description:
   background-color: #131022;
   max-width: 366.4px;
   border-radius: 8px;
+  cursor: pointer;
 }
 .download-btn .button-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 6px;
+  margin-top: 0px;
   flex-direction: row;
 }
 .download-btn .button-wrapper .icon-fix {
@@ -221,6 +247,11 @@ Description:
 }
 .download-btn p {
   color: white;
+}
+
+.download-btn:hover {
+  background-color: #6366f1;
+  border: #6366f1;
 }
 
 .download-text-apple-top {
@@ -251,6 +282,11 @@ Description:
   max-width: 100%;
 }
 
+.btn-link {
+  width: 100%;
+  text-decoration: none;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -268,6 +304,9 @@ Description:
   justify-content: center;
   align-items: center;
   gap: 25px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   width: 100%;
 }
 .discover-wrapper p {
@@ -275,11 +314,20 @@ Description:
 }
 
 .discover-button {
+  fill: #3E4265;
   width: 44px;
   height: 44px;
   border: none;
   border-radius: 50%;
   background-color: #fff;
+}
+
+.discover-button:hover {
+  background-color: #6366f1;
+  color: white;
+  stroke: white;
+  fill: white;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 500px) {
@@ -319,16 +367,28 @@ Description:
 }
 
 @media screen and (min-width: 768px) {
+  /***********************************************/
+  /***************Universal  styles
+  ***********************************************/
   .dark-mode-text {
     display: block;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
   }
+  /***********************************************/
+  /***************Top Section styles
+  ***********************************************/
   .toggle-switch {
     margin-right: 60px;
   }
+  /***********************************************/
+  /***************Hero Section styles
+  ***********************************************/
   .hero-section {
     width: 100vw;
     max-width: 100vw;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
     gap: 35px;
   }
@@ -337,12 +397,12 @@ Description:
   }
   .hero-section h1 {
     display: inline-block;
-    grid-column: 1/5;
+    grid-column: 1/10;
     font-size: 44.3px;
     max-width: 100px;
   }
   .hero-section .hero-paragarph {
-    grid-column: 1/3;
+    grid-column: 1/6;
     grid-row: 2;
     width: 360px;
   }
@@ -351,7 +411,7 @@ Description:
     flex-direction: row;
     gap: 20px;
     width: 360px;
-    grid-column: 1/3;
+    grid-column: 1/6;
     grid-row: 3;
     align-self: center;
     justify-self: center;
@@ -364,7 +424,7 @@ Description:
   }
   .hero-section .discover-wrapper {
     grid-row: 4;
-    grid-column: 1/3;
+    grid-column: 1/6;
     justify-self: center;
     width: 200px;
     margin-right: 180px;
@@ -376,7 +436,7 @@ Description:
     background-position: center;
     background-repeat: no-repeat;
     grid-row: 2/6;
-    grid-column: 3/5;
+    grid-column: 5/10;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -394,7 +454,104 @@ Description:
 }
 
 @media screen and (min-width: 1024px) {
+  /***********************************************/
+  /***************Universal  styles
+  ***********************************************/
+  /***********************************************/
+  /***************Top Header Section styles
+  ***********************************************/
   #features {
     display: block;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    cursor: pointer;
+  }
+  .signin-btn-link {
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .signin-btn {
+    width: 140px;
+    height: 36px;
+    background-color: #6366f1;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .signin-btn p {
+    color: #fff;
+    letter-spacing: 0.1px;
+    font-size: 14px;
+  }
+  .signin-btn:hover {
+    background-color: #7a7df3;
+  }
+  .toggle-switch {
+    margin-right: 10px;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  /***********************************************/
+  /***************Hero Section styles
+  ***********************************************/
+  .hero-section {
+    margin: 0 auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, auto);
+    position: relative;
+    width: 100%;
+    max-width: 75rem;
+    min-width: 60rem;
+  }
+  .hero-section h1 {
+    justify-self: start;
+    align-self: start;
+    text-align: start;
+    grid-column: 3/6;
+    font-size: 56px;
+    z-index: 1;
+  }
+  .hero-section .hero-paragarph {
+    justify-self: start;
+    align-self: start;
+    font-size: 18px;
+    grid-column: 3/4;
+  }
+  .hero-section .main-btn-wrapper {
+    grid-column: 3/4;
+    justify-self: start;
+    align-self: start;
+  }
+  .hero-section .discover-wrapper {
+    grid-column: 3/4;
+    justify-self: start;
+    align-self: start;
+  }
+  .hero-section::before {
+    content: "";
+    background-image: url("Pictures/test.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-column: 4/6;
+    grid-row: 1/6;
+    width: 490px;
+    height: 90%;
+    z-index: -1;
+    position: absolute;
+    left: 0px;
+    right: 0;
+    bottom: -15px;
+  }
+  .discover-wrapper {
+    padding-bottom: 20px;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -5,6 +5,7 @@ $primary-color: #6366f1;
 $secondary-color: rgba(218, 70, 239, 0.05);
 $dark-background: #0b0f19;
 $light-background: #ffffff;
+$light-primary-color: lighten($primary-color, 5%);
 $gradient-start: rgba(99, 102, 241, 0.1);
 $gradient-middle: rgba(218, 70, 239, 0.05);
 $gradient-end: rgba(19, 16, 34, 0.01);

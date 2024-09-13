@@ -23,6 +23,7 @@ Description:
   padding: 0;
   box-sizing: border-box;
   font-family: 'Manrope', sans-serif;
+  transition: background-color 0.16s;
 }
 
 /***********************************************/
@@ -49,6 +50,14 @@ Description:
 
 #left-side-header {
   @include flex-center(row);
+  user-select: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+#left-side-header:visited{
+  color: black;
+
 }
 
 
@@ -57,6 +66,7 @@ Description:
   font-size: rem(20.8);
   font-weight: 800;
   font-family: $font-family;
+ 
 }
 
 /*** Right side header ***/
@@ -135,18 +145,28 @@ Description:
   }
   
 
+  .signin-btn-link{
+    display: none;
+    user-select: none;
+  }
+
 /***********************************************/
 /***************Hero section styles
 ***********************************************/
 
+.background-widescreen-fixer-hero{
+  @include hero-gradient-background;
+  width: 100vw;
+  height: auto;
+}
 //**Universal Section properties**//
 .hero-section {
-  background: $light-background;
+
   height: 100%;
   font-family: $font-family;
   @include flex-center;
 //@include dark-theme($dark-background);
-  @include hero-gradient-background;
+ 
   padding-bottom: 10px; //Line fixer
     display: grid;
     grid-template-rows: auto;
@@ -193,7 +213,7 @@ Description:
   gap: 20px;
   align-items: center;
   justify-content: center;
- 
+  user-select: none;
 }
 .download-btn {
   @include flex-center;
@@ -202,12 +222,13 @@ Description:
   background-color: #131022;
   max-width: 366.4px;
   border-radius: 8px;
-
+  cursor: pointer;
   .button-wrapper {
      display: flex;
+    
      justify-content: center;
      align-items: center;
-     margin-top: 6px;
+     margin-top: 0px;
      
      flex-direction: row;
     .icon-fix {
@@ -227,9 +248,14 @@ Description:
       }
     }
   }
+  
   p{
     color: white;
   }
+}
+.download-btn:hover{
+  background-color: $primary-color;
+  border: $primary-color;
 }
 .download-text-apple-top{
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif;
@@ -254,7 +280,10 @@ Description:
   width: 139px;
   max-width: 100%;
 }
-
+.btn-link{
+ width: 100%;
+ text-decoration: none;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -273,13 +302,15 @@ Description:
   justify-content: center;
   align-items: center;
   gap: 25px;
- 
+  user-select: none;
   width: 100%;
   p{
     color: #585C7B;
   }
 }
+
 .discover-button{
+  fill:#3E4265;
   width: 44px;
   height: 44px;
   border: none;
@@ -287,6 +318,13 @@ Description:
   background-color: #fff;
 }
 
+.discover-button:hover{
+  background-color: $primary-color; 
+  color: white;
+ stroke: white;
+ fill: white;
+ cursor: pointer;
+}
 
 
 //Fix scaling for fixed width/height in mobile Specificty problem. 

@@ -1,5 +1,5 @@
 /*******Dark mode text *****/
-.dark-mode-text{   //Must be in this partial
+.dark-mode-text{   //Must be in this partial(updated loading order might work now)
     display: none;
     color: #131022;
     font-weight: 600;
@@ -9,20 +9,30 @@
    
 //Tablets Selection Media
 @media screen and (min-width: 768px) {
+
+ /***********************************************/
+/***************Universal  styles
+***********************************************/
   .dark-mode-text{
     display: block;
+    user-select: none;
   }
+
+/***********************************************/
+/***************Top Section styles
+***********************************************/
   .toggle-switch{
     margin-right: 60px;
   }
 
 
- 
- 
+/***********************************************/
+/***************Hero Section styles
+***********************************************/
   .hero-section {
     width: 100vw;
     max-width: 100vw;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
     gap: 35px;
  
@@ -33,14 +43,14 @@
     //Nested
    h1 {
     display: inline-block;
-    grid-column: 1 / 5;   
+    grid-column: 1 / 10;   
     font-size: 44.3px;
  
     max-width: 100px;
   }
 
  .hero-paragarph {
-    grid-column: 1 / 3; 
+    grid-column: 1 / 6; 
     grid-row: 2;
     width: 360px;
     
@@ -50,7 +60,7 @@
     flex-direction: row;
     gap: 20px;
     width: 360px;
-    grid-column: 1 / 3;
+    grid-column: 1 / 6;
     grid-row: 3;
     align-self: center;
     justify-self: center;
@@ -68,7 +78,7 @@
   }
   .discover-wrapper{
     grid-row: 4;
-    grid-column: 1 / 3;
+    grid-column: 1 / 6;
     justify-self: center;
     width: 200px;
     margin-right: 180px;
@@ -84,7 +94,7 @@
   background-repeat: no-repeat;
   
   grid-row: 2 / 6;
-  grid-column: 3 / 5; 
+  grid-column: 5 / 10; 
   width: 100%;
   height: 100%;
   

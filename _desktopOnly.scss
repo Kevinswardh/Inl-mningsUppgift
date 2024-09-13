@@ -11,8 +11,111 @@
 
 
   @media screen and (min-width: 1024px) {    
-        #features{
+/***********************************************/
+/***************Universal  styles
+***********************************************/
+//Currently none
+
+ /***********************************************/
+/***************Top Header Section styles
+***********************************************/
+      #features{
             display: block;
+            user-select: none;
+            cursor: pointer;
         }
+        .signin-btn-link{
+            display: block;
+            width: fit-content;
+            height: fit-content;
+          }
+        .signin-btn{
+            width: 140px;
+            height: 36px;
+            background-color: $primary-color;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            p{
+                color: #fff;
+                letter-spacing: 0.1px;
+                font-size: 14px;
+            }
+        }
+        .signin-btn:hover{
+            background-color: $light-primary-color;
+          
+        }
+        .toggle-switch{
+            margin-right: 10px;
+        }
+        .hamburger-menu{
+            display: none;
+        }
+
+/***********************************************/
+/***************Hero Section styles
+***********************************************/
+         .hero-section{
+            margin: 0 auto;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(5, auto);
+            position: relative; 
+            width: 100%;
+            max-width: 75rem;
+            min-width: 60rem;
+           
+           h1{
+            justify-self: start;
+            align-self: start;
+            text-align: start;
+            grid-column: 3 / 6;
+            font-size: 56px;
+            z-index: 1;
+           }
+          .hero-paragarph{
+            justify-self: start;
+            align-self: start;
+            font-size: 18px;
+            grid-column: 3 / 4;
+          }
+          .main-btn-wrapper{
+            grid-column: 3 / 4;
+            justify-self: start;
+            align-self: start;
+          }
+          .discover-wrapper{
+            grid-column: 3 / 4;
+            justify-self: start;
+            align-self: start;
+          }
+        }
+       
+        .hero-section::before {
+            content: "";
+            background-image: url('Pictures/test.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          
+            grid-column: 4 / 6; 
+            grid-row: 1 / 6;
+            width: 490px;
+            
+            height: 90%;
+    
+            z-index: -1;
+            position: absolute; 
+            
+            left: 0px;
+            right: 0;
+            bottom: -15px;
+          }
+       .discover-wrapper{
+        padding-bottom: 20px;
+       }
 
   }
