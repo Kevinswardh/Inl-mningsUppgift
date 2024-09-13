@@ -11,9 +11,9 @@ Description:
 // Import Fonts
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap');
 // Import variables and mixins
-@import 'variables';
-@import 'mixins';
-@import 'functions';
+@import 'Partials/variables';
+@import 'Partials/mixins';
+@import 'Partials/functions';
 
 /***********************************************/
 /***************Universal Styles
@@ -377,5 +377,5 @@ Description:
 /***************************************************/
 /*****Imports of Partials****/ //At bottom is crucial.
 /***************************************************/
-@import 'tabletOnly';
-@import 'desktopOnly';
+@import 'Partials/tabletOnly';
+@import 'Partials/desktopOnly';
