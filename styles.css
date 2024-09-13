@@ -10,84 +10,6 @@ Description:
 
 */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap");
-/*******Dark mode text *****/
-.dark-mode-text {
-  display: none;
-  color: #131022;
-  font-weight: 600;
-}
-
-@media screen and (min-width: 768px) {
-  .dark-mode-text {
-    display: block;
-  }
-  .toggle-switch {
-    margin-right: 60px;
-  }
-  .hero-section {
-    width: 100vw;
-    max-width: 100vw;
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 200px;
-  }
-  .hero-section h1 {
-    grid-column: 2/4;
-    justify-self: center;
-    align-self: center;
-  }
-  .hero-section .hero-paragarph {
-    grid-column: 1/3;
-    grid-row: 2;
-    justify-self: start;
-    text-align: start;
-  }
-  .hero-section .d-btn-1 {
-    grid-row: 3;
-    grid-column: 1/2;
-    width: 170px;
-    justify-self: end;
-  }
-  .hero-section .d-btn-2 {
-    grid-row: 3;
-    grid-column: 2/3;
-    width: 170px;
-  }
-  .hero-section .discover-wrapper {
-    grid-row: 4;
-    grid-column: 1/2;
-    justify-self: end;
-    width: 180px;
-    margin-left: 10px;
-  }
-  .hero-section::before {
-    content: "";
-    background-image: url("Pictures/test.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    grid-row: 2/6;
-    grid-column: 3/5;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
-}
-#features {
-  display: none;
-  margin-left: 0.4375rem;
-  font-size: 1rem;
-  font-weight: 400;
-  font-family: "Manrope", system-ui, sans-serif;
-  color: #33354D;
-  margin-top: 4.8px;
-  margin-left: 40px;
-}
-
-@media screen and (min-width: 1024px) {
-  #features {
-    display: block;
-  }
-}
 /***********************************************/
 /***************Universal Styles
 ***********************************************/
@@ -219,18 +141,16 @@ Description:
   justify-content: center;
   align-items: center;
   background: radial-gradient(circle at bottom center, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 50%, rgba(19, 16, 34, 0.01) 100%);
+  padding-bottom: 10px;
   display: grid;
-  grid-template-rows: 88.76px 115.2px 50px 50px 70px;
-  gap: 20px;
+  grid-template-rows: auto;
+  gap: 40px;
   padding-top: 27.02px;
 }
 .hero-section h1, .hero-section .hero-paragarph {
   justify-self: center;
   align-self: center;
   width: 100%;
-}
-.hero-section *:first-child {
-  max-width: 300px;
 }
 .hero-section *:nth-child(2) {
   max-width: 361.41px;
@@ -243,6 +163,7 @@ Description:
   text-align: center;
   font-weight: 700;
   font-size: 34.1px;
+  max-width: 300px;
 }
 .hero-section .hero-paragarph {
   display: flex;
@@ -257,6 +178,14 @@ Description:
 }
 
 /***Apple Button Self made***/
+.main-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
 .download-btn {
   display: flex;
   flex-direction: row;
@@ -341,11 +270,16 @@ Description:
   gap: 25px;
   width: 100%;
 }
+.discover-wrapper p {
+  color: #585C7B;
+}
 
 .discover-button {
   width: 44px;
   height: 44px;
   border: none;
+  border-radius: 50%;
+  background-color: #fff;
 }
 
 @media screen and (min-width: 500px) {
@@ -367,7 +301,100 @@ Description:
   }
 }
 @media screen and (min-width: 768px) {
+  .hero-section {
+    padding-bottom: 0px;
+  }
   .hero-section > * {
     transform: scale(1);
+  }
+}
+/***************************************************/
+/*****Imports of Partials****/
+/***************************************************/
+/*******Dark mode text *****/
+.dark-mode-text {
+  display: none;
+  color: #131022;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .dark-mode-text {
+    display: block;
+  }
+  .toggle-switch {
+    margin-right: 60px;
+  }
+  .hero-section {
+    width: 100vw;
+    max-width: 100vw;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 35px;
+  }
+  .hero-section *:first-child {
+    max-width: 500px;
+  }
+  .hero-section h1 {
+    display: inline-block;
+    grid-column: 1/5;
+    font-size: 44.3px;
+    max-width: 100px;
+  }
+  .hero-section .hero-paragarph {
+    grid-column: 1/3;
+    grid-row: 2;
+    width: 360px;
+  }
+  .hero-section .main-btn-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 360px;
+    grid-column: 1/3;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+  }
+  .hero-section .d-btn-1 {
+    width: 170px;
+  }
+  .hero-section .d-btn-2 {
+    width: 170px;
+  }
+  .hero-section .discover-wrapper {
+    grid-row: 4;
+    grid-column: 1/3;
+    justify-self: center;
+    width: 200px;
+    margin-right: 180px;
+  }
+  .hero-section::before {
+    content: "";
+    background-image: url("Pictures/test.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-row: 2/6;
+    grid-column: 3/5;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+#features {
+  display: none;
+  margin-left: 0.4375rem;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Manrope", system-ui, sans-serif;
+  color: #33354D;
+  margin-top: 4.8px;
+  margin-left: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+  #features {
+    display: block;
   }
 }/*# sourceMappingURL=styles.css.map */
