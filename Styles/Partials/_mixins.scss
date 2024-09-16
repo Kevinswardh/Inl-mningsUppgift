@@ -1,3 +1,4 @@
+
 // Flexbox Centering
 @mixin flex-center($centerJ: center, $centerA: center, $flex-dir: row){
     display: flex;
@@ -20,12 +21,14 @@
   }
   
   // Dark Theme
-  @mixin dark-theme($background-color, $text-color: #ffffff) {
-    @media (prefers-color-scheme: dark) {
-      background-color: $background-color;
+ 
+  @mixin dark-theme {
+    .toggle-switch input:checked ~ #top-header {
+      background-color: $dark-background;
       color: $text-color;
     }
   }
+
   
   // Gradient Background for Hero Section
   @mixin hero-gradient-background {

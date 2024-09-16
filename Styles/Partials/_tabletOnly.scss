@@ -88,7 +88,7 @@
 }
 .hero-section::before {
   content: "";
-  background-image: url('Pictures/test.png'); // Bilden är vald att genereras med AI. Källa: Builder.io sedan laddat ned i png format. 
+  background-image: url('/Pictures/test.png'); // Bilden är vald att genereras med AI. Källa: Builder.io sedan laddat ned i png format. 
   background-size: contain;                   
   background-position: center; 
   background-repeat: no-repeat;
@@ -100,4 +100,35 @@
   
   z-index: -1; 
 }
+/***********************************************/
+/***************Brand section styles
+***********************************************/
+.brand-wrapper{
+  display: flex;
+}
+
+
+
+
+
+//Inside the media
+}
+
+
+
+////////////////////////////////////
+///////Higher tablet widths
+//////////////////////////////
+/// 
+/// 
+@media screen and (min-width: 868px){
+ .brand-wrapper{
+  transform: scale(0.9);
+ }
+}
+
+@media screen and (min-width: 968px){
+  .brand-wrapper{
+    transform: scale(1);
+   }
 }

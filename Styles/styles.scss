@@ -15,6 +15,14 @@ Description:
 @import 'Partials/mixins';
 @import 'Partials/functions';
 
+
+/////////////////
+/// Root styles - Dark mode fix
+/// 
+:root{
+  --header-background: #fff;
+}
+
 /***********************************************/
 /***************Universal Styles
 ***********************************************/
@@ -25,16 +33,26 @@ Description:
   font-family: 'Manrope', sans-serif;
   transition: background-color 0.16s;
 }
+.section-max-width{
+  max-width: fit-content;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+// html {
+//   @include dark-theme($dark-background, $text-color);
+// }
 
 /***********************************************/
 /***************Top Header styles
 ***********************************************/
 #top-header {
+  z-index: 999;
   width: 100%;
   height: $header-height;
-  background-color: $light-background;
+  box-shadow: 0px 0px 3px 0px hsl(0, 0%, 70%);
+  // background-color: $light-background;
   @include sticky-header;
-
+  background-color: var(--header-background);
   // Dark theme for top header
   // @include dark-theme($dark-background);
 }
@@ -45,7 +63,7 @@ Description:
   max-width: rem(1200);
   margin: 0 auto;
   max-height: $header-height;
- 
+
 }
 
 #left-side-header {
@@ -86,7 +104,7 @@ Description:
   box-shadow: 0px 8px 18px -8px rgba($primary-color, 0.9);
   cursor: pointer;
   display: inline-block;
-
+  user-select: none;
   input {
     display: none;
   }
@@ -105,12 +123,15 @@ Description:
 
   input:checked + .toggle-knob {
     left: calc(#{$toggle-switch-width} - #{$toggle-knob-diameter} - 6px);
+    
   }
 
 }
 .toggle-switch:has(input:checked) {
-  background-color: $primary-color;
+background-color: $primary-color;
+
 }
+
 /***Menu button Mobile***/
 .hamburger-menu {
     width: 30px;
@@ -156,8 +177,10 @@ Description:
 
 .background-widescreen-fixer-hero{
   @include hero-gradient-background;
-  width: 100vw;
+  width: 100%;
   height: auto;
+  
+
 }
 //**Universal Section properties**//
 .hero-section {
@@ -327,6 +350,193 @@ Description:
 }
 
 
+
+/***********************************************/
+/***************Brand section styles
+***********************************************/
+
+.brand-wrapper{
+  display: none;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: nowrap;
+  transform: scale(0.8);
+  
+}
+
+.brand-wrapper img:nth-child(n+5) {
+  display: none;
+}
+
+/***********************************************/
+/**********App Features section styles
+***********************************************/
+
+.app-features-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  padding: 5px;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  h2{
+    text-align: center;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 27.9px;
+    margin: 0 auto;
+  }
+  p{
+    text-align: center;
+    font-size: 18px;
+    color: #585C7B;
+    padding: 0px 25px;
+    max-width: 425px;
+    font-family: $font-family;
+    margin: 0 auto;
+  }
+}
+
+.app-features-grid-item{
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  gap: 20px;
+  max-width: 435px;
+  img{
+    align-self: start;
+  }
+  h3{
+    text-align: start;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  p{
+    text-align: start;
+    padding: 0;
+    font-size: 16px;
+    color: #585C7B;
+  }
+}
+/***********************************************/
+/**********how it works section styles
+***********************************************/
+.howitworks-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 75rem;
+  gap: 30px;
+  h2{
+    max-width: 435px;
+  }
+  h3{
+    max-width: 250px;
+    font-weight:900;
+    font-size: 21.6;
+  }
+  p{
+    max-width: 415px;
+    font-size: 16px;
+    color: #585C7B;
+  }
+}
+.howitworks-textbox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+/***********************************************/
+/**********Q & A section styles
+***********************************************/
+.qa-top-text-box{
+  margin: 0 auto;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 355px;
+  text-align: center;
+  h2{
+    font-size: 24.7px;
+    font-weight: 900;
+  }
+  p{
+    color: #585C7B;
+    font-size: 18px;
+  }
+}
+//Grid start
+.qa-grid{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  max-width: 45rem;
+  margin: 20px;
+}
+//Header
+.qa-header-box{
+  border: 1px solid hsl(0, 0%, 70%);
+  border-top: none;
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  gap: 20px;
+  h3{
+    font-size: 16px;
+    max-width: 261px;
+  }
+}
+.qa-grid .qa-header-box:nth-child(2) {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top: 1px solid hsl(0, 0%, 70%);
+}
+.qa-btn-box-clicked{
+  background-color: $primary-color;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+//Content
+.qa-content-box{
+  padding: 32px;
+  border: 1px solid hsl(0, 0%, 70%);
+  border-top: none;
+  p{
+    color: #585C7B;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+
+
+//END
+//////////////////////////////////
+/// 
+/// 
+/// 
 //Fix scaling for fixed width/height in mobile Specificty problem. 
 @media screen and (min-width: 500px) {
   .hero-section {
@@ -361,12 +571,6 @@ Description:
  
 }
 }
-
-
-//////////////////////////////////
-/// 
-/// 
-/// 
 /// 
 /// 
 /// 
@@ -375,7 +579,7 @@ Description:
 /// 
 /// 
 /***************************************************/
-/*****Imports of Partials****/ //At bottom is crucial.
+/*****Imports of Partials****/ //At bottom is crucial for preprocessor rules.
 /***************************************************/
 @import 'Partials/tabletOnly';
 @import 'Partials/desktopOnly';
