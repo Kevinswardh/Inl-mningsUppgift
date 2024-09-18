@@ -361,23 +361,12 @@ background-color: $primary-color;
 
 .brand-wrapper{
   display: none;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  flex-wrap: nowrap;
-  img{
-    flex: 1 1 auto;
-    height: auto;
-    width: 100%;
-    width: calc((75rem - 60px) / 7);
-    max-width: 196px;
-    max-height: 100px;  
-  }
+  //Styles in Tablet/Desktop only
 }
 
 .brand-wrapper img:nth-child(n+5) {
   display: none;
+  //Styles in Tablet/Desktop only
 }
 
 /***********************************************/
@@ -464,6 +453,18 @@ background-color: $primary-color;
     color: #585C7B;
   }
 }
+.howitworks-img-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.howitworks-img-wrapper img:nth-child(1),
+.howitworks-img-wrapper img:nth-child(3) {
+  display: none;
+}
+
+
+
 .howitworks-textbox{
   display: flex;
   flex-direction: column;
@@ -472,7 +473,7 @@ background-color: $primary-color;
   gap: 15px;
 }
 /***********************************************/
-/**********Q & A section styles
+/**********Q & A or FAQ section styles
 ***********************************************/
 .qa-top-text-box{
   margin: 0 auto;
@@ -501,6 +502,7 @@ background-color: $primary-color;
   margin: 20px;
   
 }
+
 //Header
 .qa-header-box{
   border: 1px solid #E2E5F1;
@@ -525,7 +527,7 @@ background-color: $primary-color;
 .qa-grid .qa-header-box:nth-last-of-type(2) {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  border-top: 1px solid #E2E5F1;
+
 }
 .qa-btn-box-clicked{
   background-color: $primary-color;
@@ -536,7 +538,9 @@ background-color: $primary-color;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px -8px 18px -8px #6366F1;;
+  box-shadow: 0px -8px 18px -8px #6366F1;
+  cursor: pointer;
+  user-select: none;
 }
 .qa-btn-box{
   background-color: #F3F6FF;
@@ -547,6 +551,8 @@ background-color: $primary-color;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  user-select: none;
 }
 //Content
 .qa-content-box{
@@ -556,6 +562,31 @@ background-color: $primary-color;
   p{
     color: #585C7B;
     margin-bottom: 10px;
+  }
+}
+//The display none fix 
+.qa-grid .qa-content-box:nth-child(3) {
+  display: block;
+}
+.qa-grid .qa-header-box:nth-child(2){
+  .qa-btn-box-clicked{
+    display: flex;
+  }
+  .qa-btn-box{
+    display: none;
+  }
+}
+.shadow-wrapper .qa-content-box:nth-child(2) {
+  display: none;
+}
+.shadow-wrapper .qa-header-box:nth-child(1){
+  border-radius: 0;
+  border-top: none;
+  .qa-btn-box-clicked{
+    display: none;
+  }
+  .qa-btn-box{
+    display: flex;
   }
 }
 /***********************************************/
@@ -592,6 +623,9 @@ background-color: $primary-color;
     font-size: 14px;
   }
  
+}
+.contact-tablet-wrapper{
+  display: none;
 }
 
 //Subscribe
