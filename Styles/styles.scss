@@ -42,6 +42,15 @@ Description:
 .margin-20{
   margin: 20px;
 }
+.desktop-only{ // Default is flex on desktop
+  display: none;
+}
+.desktop-only-block{ 
+  display: none;
+}
+.mobile-tablet-only{
+ display: block;
+}
 // html {
 //   @include dark-theme($dark-background, $text-color);
 // }
@@ -325,6 +334,7 @@ background-color: $primary-color;
 
 //*******Discover more button*********//
 .discover-wrapper{
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -400,6 +410,11 @@ background-color: $primary-color;
   }
 }
 
+.app-features-img{
+  display: none;
+}
+
+
 .app-features-grid-item{
   display: flex;
   flex-direction: row;
@@ -472,6 +487,25 @@ background-color: $primary-color;
   justify-content: center;
   gap: 15px;
 }
+.desktop-only{ // Default is flex on desktop
+  display: none;
+} //Remebr to change to variable in SCSS
+//So you can use in Universal styles
+
+/***********************************************/
+/**********Explanation section styles
+***********************************************/
+
+//Only universal style in mobile
+
+
+/***********************************************/
+/**********Revies section styles
+***********************************************/
+
+//Only Universal style in mobile
+
+
 /***********************************************/
 /**********Q & A or FAQ section styles
 ***********************************************/
@@ -565,10 +599,10 @@ background-color: $primary-color;
   }
 }
 //The display none fix 
-.qa-grid .qa-content-box:nth-child(3) {
+.qa-grid .qa-content-box:nth-child(4) {
   display: block;
 }
-.qa-grid .qa-header-box:nth-child(2){
+.qa-grid .qa-header-box:nth-child(3){
   .qa-btn-box-clicked{
     display: flex;
   }
