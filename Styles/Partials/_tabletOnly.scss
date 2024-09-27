@@ -117,6 +117,11 @@
 /***********************************************/
 /***************Brand section styles
 ***********************************************/
+.brand-padding{
+  padding-top: 15px;
+  padding-bottom: 50px;
+  margin-top: 0;
+}
 .brand-wrapper{
   display: flex;
   gap: 20px;
@@ -133,6 +138,15 @@
     max-width: 196px;
     max-height: 100px;  
   }
+
+    .brand-1, .brand-2, .brand-3, .brand-4, .brand-5, .brand-6{
+      display: block;
+    
+  }
+  .brand-5, .brand-6{
+    display: none;
+  }
+
 }
 
 /***********************************************/
@@ -197,12 +211,22 @@
     width: 450px;
   }
 }
+.shadow-wrapper .qa-header-box:nth-child(1){
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
 .shadow-wrapper{
   box-shadow: 
   0px 4.4px 12px -1px rgba(19, 16, 34, 0.06),
   0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);  
   border-radius: 8px;
-  margin-top: 12px;
+  margin-top: 20px;
+  .qa-header-box{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
 }
 .qa-header-box{
   border:none;
@@ -216,6 +240,9 @@
   h3{
     max-width: 100%;
   }
+}
+.qa-header-box:nth-of-type(3) {
+  border-top: none;
 }
 .qa-content-box{
   border: none;

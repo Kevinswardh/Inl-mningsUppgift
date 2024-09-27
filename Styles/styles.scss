@@ -21,11 +21,13 @@ Description:
 /// 
 :root{
   --header-background: #fff;
+
 }
 
 /***********************************************/
 /***************Universal Styles
 ***********************************************/
+
 * {
   margin: 0;
   padding: 0;
@@ -51,6 +53,7 @@ Description:
 .mobile-tablet-only{
  display: block;
 }
+
 // html {
 //   @include dark-theme($dark-background, $text-color);
 // }
@@ -73,7 +76,7 @@ Description:
 .wrapper {
   @include flex-space-between(space-between, center);
   padding: 0 rem(16);
-  max-width: rem(1200);
+  max-width: rem(1298);
   margin: 0 auto;
   max-height: $header-height;
 
@@ -85,12 +88,42 @@ Description:
   cursor: pointer;
   text-decoration: none;
   color: black;
+  div{
+    nav{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      a{
+       text-decoration: none;
+       color: black;
+       
+      }
+      a:visited{
+        color: black;
+      }
+      #features{
+        margin-top: 4px;
+      }
+    }
+  }
 }
 #left-side-header:visited{
   color: black;
 
 }
+#features{
+  display: none;
+  margin-left: rem(7);
+  font-size: rem(16);
+  font-weight: 400;
+  font-family: $font-family;
+  color: #33354D;
+ align-self: center;
+ justify-self: center;
 
+}
 
 #logo-name {
   margin-left: rem(7);
@@ -119,7 +152,7 @@ Description:
   display: inline-block;
   user-select: none;
   input {
-    display: none;
+    opacity: 0;
   }
 
   .toggle-knob {
@@ -140,10 +173,21 @@ Description:
   }
 
 }
+#darkmode-checkbox{
+  height: 100%;
+  width: 100%;
+}
+.toggle-switch:has(input:focus-visible) {
+  border:  1px solid black;
+  box-sizing: content-box;
+
+}
+
 .toggle-switch:has(input:checked) {
 background-color: $primary-color;
 
 }
+
 
 /***Menu button Mobile***/
 .hamburger-menu {
@@ -154,7 +198,8 @@ background-color: $primary-color;
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    
+    border:none;
+    background-color: #fff;
   }
   
   .hamburger-menu span {
@@ -197,7 +242,7 @@ background-color: $primary-color;
 }
 //**Universal Section properties**//
 .hero-section {
-
+  overflow: hidden;
   height: 100%;
   font-family: $font-family;
   @include flex-center;
@@ -277,10 +322,12 @@ background-color: $primary-color;
         position: absolute;
         top: -6px; 
         left: 2´0px; 
+        fill: white;
       }
 
       .apple-icon {
         position: relative;
+        fill: white;
       }
     }
   }
@@ -372,17 +419,22 @@ background-color: $primary-color;
 .brand-wrapper{
   display: none;
   //Styles in Tablet/Desktop only
-}
-
-.brand-wrapper img:nth-child(n+5) {
-  display: none;
-  //Styles in Tablet/Desktop only
+  .d-brand-1, .d-brand-2, .d-brand-3, .d-brand-4, .d-brand-5, .d-brand-6{
+    display: none;
+   }
+   .brand-1, .brand-2, .brand-3, .brand-4, .brand-5, .brand-6{
+    display: none;
+   }
 }
 
 /***********************************************/
 /**********App Features section styles
 ***********************************************/
-
+.app-features-padding{
+  margin-top: -100px;
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
 .app-features-grid{
   display: grid;
   grid-template-columns: 1fr;
@@ -421,10 +473,11 @@ background-color: $primary-color;
   padding: 20px;
   gap: 20px;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   img{
     align-self: start;
   }
+
   h3{
     text-align: start;
     font-size: 20px;
@@ -435,6 +488,11 @@ background-color: $primary-color;
     padding: 0;
     font-size: 16px;
     color: #585C7B;
+  }
+  &:hover{
+  transform: scale(1.1);
+ box-shadow: 0px 0px 0px 0.2px hsla(0, 0%, 100%, 0.65);
+ transition: all 0.1s ease-in;
   }
 }
 /***********************************************/
@@ -495,7 +553,11 @@ background-color: $primary-color;
 /***********************************************/
 /**********Explanation section styles
 ***********************************************/
-
+.explanation-padding{
+  margin-top: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 //Only universal style in mobile
 
 
@@ -509,6 +571,11 @@ background-color: $primary-color;
 /***********************************************/
 /**********Q & A or FAQ section styles
 ***********************************************/
+.qa-padding{
+    margin-top: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 .qa-top-text-box{
   margin: 0 auto;
   margin-bottom: 40px;
@@ -518,6 +585,7 @@ background-color: $primary-color;
   justify-content: center;
   max-width: 355px;
   text-align: center;
+
   h2{
     font-size: 24.7px;
     font-weight: 900;
@@ -548,21 +616,28 @@ background-color: $primary-color;
   justify-content: center;
   justify-content: space-between;
   gap: 20px;
+
   h3{
     font-size: 16px;
     max-width: 261px;
   }
+}
+.qa-header-box:nth-of-type(3) {
+  border-top: 1px solid #E2E5F1;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 .qa-grid .qa-header-box:nth-child(2) {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-top: 1px solid #E2E5F1;
 }
-.qa-grid .qa-header-box:nth-last-of-type(2) {
+.qa-grid .qa-header-box:nth-child(12){
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 
 }
+
 .qa-btn-box-clicked{
   background-color: $primary-color;
   width: 36px;
@@ -587,6 +662,9 @@ background-color: $primary-color;
   justify-content: center;
   cursor: pointer;
   user-select: none;
+  svg{
+    fill: #3E4265;
+  }
 }
 //Content
 .qa-content-box{
@@ -614,7 +692,7 @@ background-color: $primary-color;
   display: none;
 }
 .shadow-wrapper .qa-header-box:nth-child(1){
-  border-radius: 0;
+
   border-top: none;
   .qa-btn-box-clicked{
     display: none;
@@ -661,7 +739,25 @@ background-color: $primary-color;
 .contact-tablet-wrapper{
   display: none;
 }
+.contact-right-side{
+  button{
+    cursor: pointer;
+    user-select: none;
+  }
+}
+.contact-right-side:hover button {
+  transform: scale(1.1);
 
+}
+.contact-left-side{
+  button{
+    cursor: pointer;
+    user-select: none;
+  }
+}
+.contact-left-side:hover button {
+  transform: scale(1.1);
+}
 //Subscribe
 .sub-grid{
   display: grid;
@@ -684,6 +780,10 @@ background-color: $primary-color;
   margin-top: 30px;
   h3{
     max-width: 250px;
+  }
+  img{
+    margin-top: -20px;
+ 
   }
 }
 .email-wrapper{
@@ -741,6 +841,8 @@ background-color: $primary-color;
   color: white;
   font-size: 16px;
   padding: 15px;
+  cursor: pointer;
+  user-select: none;
 }
 
 /***********************************************/
@@ -766,6 +868,10 @@ footer p{
   html{
     zoom: 1.05;
   }
+ .hamburger-menu{
+  zoom: 1;
+ }
+
 
 
 }
@@ -773,12 +879,20 @@ footer p{
   html{
     zoom: 1.1;
   }
+  .hamburger-menu{
+    zoom: 0.99;
+   }
+  
 }
 //Reset at tablets again
 @media screen and (min-width: 768px) {
   html{
     zoom: 1;
   }
+  .hamburger-menu{
+    zoom: 1;
+   }
+  
 }
 /// 
 /// 
@@ -792,3 +906,5 @@ footer p{
 /***************************************************/
 @import 'Partials/tabletOnly';
 @import 'Partials/desktopOnly';
+@import 'Partials/darkmode';
+@import 'Partials/resets';

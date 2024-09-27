@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silicon - Homepage</title>
+    <title>Silicon - Easy Payments</title>
+    <link rel="icon" href="/Pictures/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="Styles/styles.css">
-   
+    <meta name="description" content="Manage all your money in one app. Experience a new generation of mobile banking with easy payments.">
+    <script src="Javascript/javascript.js" async></script>
 </head>
 <body>
 <!---------------------------------------->
@@ -13,9 +15,9 @@
 <!---------------------------------------->
 <header id="top-header">
     <div class="wrapper">
-        <a href="#"  id="left-side-header">
-            <div style="padding: 4px;">
-                <svg width="47" height="44" viewBox="0 0 47 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div aria-label="Menu to the Left" href="#"  id="left-side-header">
+            <div style="padding: 4px; display: flex; flex-direction: row;">
+                <svg href="#"  width="47" height="44" viewBox="0 0 47 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_20005128_13053)">
                     <g clip-path="url(#clip1_20005128_13053)">
                     <g clip-path="url(#clip2_20005128_13053)">
@@ -84,27 +86,26 @@
                     <rect width="47" height="44" fill="white"/>
                 </clipPath>
             </defs>
-                </svg>
-            </div>
-            <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
-                <p id="logo-name">Silicon</p>
-                <p id="features">Features</p>
-            </div>
-            
-            
-        </a>
-        <div id="right-side-header">
+   
+        </svg>
+                <nav>
+                    <a aria-current="page" id="logo-name" href="#"  tabindex="0">Silicon</a>
+                    <a id="features" href="#"   tabindex="0">Features</a>
+                </nav>
+            </div>   
+        </div>
+        <div id="right-side-header" aria-label="Menu to the Right" >
             <p class="dark-mode-text">Dark Mode</p>    
-            <label class="toggle-switch">
-                <input type="checkbox">
+            <label for="darkmode-checkbox" class="toggle-switch">
+                <input aria-label="Dark mode checkbox" id="darkmode-checkbox" type="checkbox" tabindex="0">
                 <div class="toggle-knob"></div>
             </label>
-            <div class="hamburger-menu">
+            <button aria-controls="Mobile menu" aria-expanded="false" aria-label="Mobile site menu" class="hamburger-menu" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-            <a class="signin-btn-link">
+            </button>
+            <button class="signin-btn-link" tabindex="0">
              <div class="signin-btn">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.25 5.25C5.25 3.18225 6.93225 1.5 9 1.5C11.0677 1.5 12.75 3.18225 12.75 5.25C12.75 7.31775 11.0677 9 9 9C6.93225 9 5.25 7.31775 5.25 5.25ZM9 7.5C7.75736 7.5 6.75 6.49264 6.75 5.25C6.75 4.00736 7.75736 3 9 3C10.2426 3 11.25 4.00736 11.25 5.25C11.25 6.49264 10.2426 7.5 9 7.5Z" fill="white"/>
@@ -112,7 +113,7 @@
                     </svg>
                     <p>Sign in / up</p>
              </div>
-            </a>
+            </button>
         </div>
     </div>
 </header>
@@ -120,7 +121,7 @@
 <!------------Hero section--------------->
 <!---------------------------------------->
 <div class="background-widescreen-fixer-hero">
-<section class="hero-section">
+<main class="hero-section">
 
           <!--Text section-->
           <h1>Manage All Your Money in one App</h1>
@@ -133,12 +134,12 @@
           <div class="download-btn d-btn-1">
              <div class="button-wrapper">
                 <div class="icon-fix">
-                    <svg class="apple-icon-top" width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5.26604 4.58035C6.26857 3.39555 6.90654 1.75505 6.72426 0.023407C5.26604 0.114546 3.5344 1.02593 2.44073 2.21074C1.52934 3.21327 0.709093 4.94491 0.891371 6.58541C2.53187 6.67655 4.26351 5.76516 5.26604 4.58035Z" fill="white"/>
+                    <svg class="apple-icon-top" width="7" height="7" viewBox="0 0 7 7"  xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.26604 4.58035C6.26857 3.39555 6.90654 1.75505 6.72426 0.023407C5.26604 0.114546 3.5344 1.02593 2.44073 2.21074C1.52934 3.21327 0.709093 4.94491 0.891371 6.58541C2.53187 6.67655 4.26351 5.76516 5.26604 4.58035Z" />
                         </svg>
                         
-                    <svg class="apple-icon" width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19.9116 9.06133C19.9116 5.50691 22.9191 3.77528 23.0103 3.68414C21.2786 1.22339 18.6356 0.949971 17.7242 0.858832C15.5369 0.585415 13.3496 2.13478 12.1648 2.13478C10.9799 2.13478 9.24831 0.858832 7.33439 0.858832C4.87364 0.858832 2.59517 2.22591 1.41036 4.41325C-1.14153 8.78791 0.77239 15.1676 3.23314 18.6309C4.50909 20.3626 5.87617 22.2765 7.79009 22.1853C9.61286 22.0942 10.342 21.0005 12.5293 21.0005C14.7166 21.0005 15.3546 22.1853 17.2685 22.0942C19.2736 22.0942 20.4584 20.3626 21.6432 18.6309C23.1014 16.6259 23.6483 14.7119 23.6483 14.6208C23.7394 14.7119 19.9116 13.3449 19.9116 9.06133Z" fill="white"/>
+                    <svg class="apple-icon" width="24" height="23" viewBox="0 0 24 23"  xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.9116 9.06133C19.9116 5.50691 22.9191 3.77528 23.0103 3.68414C21.2786 1.22339 18.6356 0.949971 17.7242 0.858832C15.5369 0.585415 13.3496 2.13478 12.1648 2.13478C10.9799 2.13478 9.24831 0.858832 7.33439 0.858832C4.87364 0.858832 2.59517 2.22591 1.41036 4.41325C-1.14153 8.78791 0.77239 15.1676 3.23314 18.6309C4.50909 20.3626 5.87617 22.2765 7.79009 22.1853C9.61286 22.0942 10.342 21.0005 12.5293 21.0005C14.7166 21.0005 15.3546 22.1853 17.2685 22.0942C19.2736 22.0942 20.4584 20.3626 21.6432 18.6309C23.1014 16.6259 23.6483 14.7119 23.6483 14.6208C23.7394 14.7119 19.9116 13.3449 19.9116 9.06133Z" />
                     </svg>
                 </div>
                 <div style="width: fit-content; margin-left: 4px;">
@@ -150,20 +151,21 @@
         </a>
           <!--Second button-->
           
-          <a href="//play.google.com/store/apps/details?id=com.paypal.android.p2pmobile&hl=en" class="btn-link">
+          <a aria-label="Downlaod on Google play" href="//play.google.com/store/apps/details?id=com.paypal.android.p2pmobile&hl=en" class="btn-link">
             <div class="download-btn d-btn-2">
                 <h2 class="visually-hidden"></h2>
                 <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ef175e3dd13c2953add0ad3a9f072928aa11e0ec97082e3e75dcfb9a787e1ee4?placeholderIfAbsent=true&apiKey=2a274513ffcd4318aca721aa009fe223" class="link-image" alt="Link image" />
+
+           
             </div>
         </a>
-      
 
         </div>
 
          <!--Discover more button-->
           <div class="discover-wrapper">
            
-            <Button class="discover-button">
+            <Button aria-label="to next section" class="discover-button">
                 <svg width="20" height="20" viewBox="0 0 20 20"  xmlns="http://www.w3.org/2000/svg">
                     <path d="M13.5742 7.5L10 11.0742L6.42578 7.5L5.25391 8.67188L10 13.4375L14.7461 8.67188L13.5742 7.5Z"/>
                     </svg>
@@ -173,25 +175,38 @@
           
           </div>
         </div>
-</section>
+    </main>
 <!---------------------------------------->
 <!------------Brand section--------------->
 <!---------------------------------------->
-<section class="section-max-width">
+<div class="background-widescreen-fixer-brand">
+<section aria-label="Brand section" class="section-max-width brand-padding">
 <div class="brand-wrapper">
- <img src="/Pictures/Brands/brand-1.png" >
- <img src="/Pictures/Brands/brand-2.png" >
- <img src="/Pictures/Brands/brand-3.png" >
- <img src="/Pictures/Brands/brand-4.png" >
- <img src="/Pictures/Brands/brand-5.png" >
- <img src="/Pictures/Brands/brand-6.png" >
+<!--Normal logos-->
+ <img class="brand-1" src="/Pictures/Brands/brand-1.png" >
+ <img class="brand-2" src="/Pictures/Brands/brand-2.png" >
+ <img class="brand-3" src="/Pictures/Brands/brand-3.png" >
+ <img class="brand-4" src="/Pictures/Brands/brand-4.png" >
+ <img class="brand-5" src="/Pictures/Brands/brand-5.png" >
+ <img class="brand-6" src="/Pictures/Brands/brand-6.png" >
+
+<!--Dark mode logos-->
+
+<img class="d-brand-1" src="/Pictures/Brands/d-brand-1.png" >
+<img class="d-brand-2" src="/Pictures/Brands/d-brand-2.png" >
+<img class="d-brand-3" src="/Pictures/Brands/d-brand-3.png" >
+<img class="d-brand-4" src="/Pictures/Brands/d-brand-4.png" >
+<img class="d-brand-5" src="/Pictures/Brands/d-brand-5.png" >
+<img class="d-brand-6" src="/Pictures/Brands/d-brand-6.png" >
+
 </div>
 </section>
-
+</div>
 <!---------------------------------------->
 <!---------App Features section----------->
 <!---------------------------------------->
-<section class="section-max-width">
+<div class="background-widescreen-fixer-app-features">
+<section aria-label="App features section"  class="section-max-width app-features-padding">
     <div class="flex-wrapper">
     <img class="app-features-img" src="/Pictures/app-features-img.png">
     <grid class="app-features-grid">
@@ -207,7 +222,8 @@
         </p>
         <!--Grid item-->
         <div class="app-features-grid-item">
-            <img src="/Pictures/app-icons/app-icon-1.svg">
+           
+            <img class="d-app-icon-1" src="/Pictures/app-icons/d-app-icon-1.svg">
             <div>
                 <h3>
                     Easy Payments
@@ -220,7 +236,8 @@
         </div>
         <!--Grid item-->
         <div class="app-features-grid-item">
-            <img src="/Pictures/app-icons/app-icon-2.svg">
+
+            <img class="d-app-icon-2" src="/Pictures/app-icons/d-app-icon-2.svg">
             <div>
                 <h3>
                     Data Security
@@ -234,7 +251,8 @@
         </div>
         <!--Grid item-->
         <div class="app-features-grid-item">
-            <img src="/Pictures/app-icons/app-icon-3.svg">
+
+            <img class="d-app-icon-3" src="/Pictures/app-icons/d-app-icon-3.svg">
             <div>
                 <h3>
                     Cost Statistics
@@ -247,7 +265,8 @@
         </div>
         <!--Grid item-->
         <div class="app-features-grid-item">
-            <img src="/Pictures/app-icons/app-icon-4.svg">
+
+            <img class="d-app-icon-4" src="/Pictures/app-icons/d-app-icon-4.svg">
             <div>
                 <h3>
                     Support 24/7
@@ -260,7 +279,8 @@
         </div>
         <!--Grid item-->
         <div class="app-features-grid-item">
-            <img src="/Pictures/app-icons/app-icon-5.svg">
+
+            <img class="d-app-icon-5" src="/Pictures/app-icons/d-app-icon-5.svg">
             <div>
                 <h3>
                     Regular Cashback
@@ -274,7 +294,8 @@
         </div>
         <!--Grid item-->
         <div class="app-features-grid-item">
-            <img src="/Pictures/app-icons/app-icon-6.svg">
+            <img class="app-icon-6" src="/Pictures/app-icons/d-app-icon-6.svg">
+          
             <div>
                 <h3>
                     Top Standards
@@ -289,6 +310,7 @@
     </grid>   
 </div>
 </section>
+</div>
 <!---------------------------------------->
 <!---------How it works section----------->
 <!---------------------------------------->
@@ -334,7 +356,8 @@
 <!---------------------------------------->
 <!---------Explaination section----------->
 <!---------------------------------------->
-<section class="section-max-width desktop-only-block">
+<div class="background-widescreen-fixer-explanation">
+<section class="section-max-width desktop-only-block explanation-padding">
      <div class="explanation-grid">
         <div class="exp-box-item-1">
            <h2>Make your money transfer simple and clear</h2>
@@ -378,8 +401,8 @@
            </h2>
            <div class="flex-row">
                 <!--Flex item 1-->
-                <div class="app-features-grid-item">
-                    <img src="/Pictures/app-icons/app-icon-1.svg">
+                <div class="app-features-grid-item no-shadow">
+                    <img src="/Pictures/app-icons/d-app-icon-1.svg">
                     <div>
                         <p>
                             Manage your payments online. Mollis congue egestas egestas fermentum fames.
@@ -387,8 +410,8 @@
                     </div>
                 </div>
                 <!--Flex item 2-->
-                <div class="app-features-grid-item">
-                    <img src="/Pictures/app-icons/app-icon-5.svg">
+                <div class="app-features-grid-item no-shadow">
+                    <img class="img-2" src="/Pictures/app-icons/d-app-icon-5.svg">
                     <div>
                         <p>
                             A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.
@@ -405,6 +428,7 @@
         </div>
      </div>
 </section>
+</div>
 <!---------------------------------------->
 <!-----------Reviews section-------------->
 <!---------------------------------------->
@@ -470,7 +494,8 @@
 <!---------------------------------------->
 <!---------Q & A section----------->
 <!---------------------------------------->
-<section class="section-max-width">
+<div class="background-widescreen-fixer-qa-to-footer">
+<section class="section-max-width qa-padding">
     <grid class="qa-grid">
       <div class="qa-top-text-box">
           <h2>
@@ -530,7 +555,17 @@
              <img width="10px" height="6.18px" src="/Pictures/qa-clicked-btn.svg">      
            </div>
            <div class="qa-btn-box">
-            <img width="10px" height="10px" src="/Pictures/qa-btn.svg"> 
+            <svg width="10" height="10" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_20005128_12900)">
+                <path d="M9.42092 2.7605L5.6001 6.58132L1.77928 2.7605L0.600098 3.93964L5.6001 8.93964L10.6001 3.93964L9.42092 2.7605Z" />
+                </g>
+                <defs>
+                <clipPath id="clip0_20005128_12900">
+                <rect width="10" height="10" fill="white" transform="translate(0.600098 0.850098)"/>
+                </clipPath>
+                </defs>
+                </svg>
+                
           </div>
         </div>
         <div class="qa-content-box">
@@ -561,7 +596,16 @@
                 transaction history in?
             </h3>
             <div class="qa-btn-box">
-              <img width="10px" height="10px" src="/Pictures/qa-btn.svg"> 
+                <svg width="10" height="10" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_20005128_12900)">
+                    <path d="M9.42092 2.7605L5.6001 6.58132L1.77928 2.7605L0.600098 3.93964L5.6001 8.93964L10.6001 3.93964L9.42092 2.7605Z" />
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_20005128_12900">
+                    <rect width="10" height="10" fill="white" transform="translate(0.600098 0.850098)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
             </div>
          </div>
          <div style="display: none;" class="qa-content-box">
@@ -574,7 +618,16 @@
                     Can I schedule future transfers?
                 </h3>
                 <div class="qa-btn-box">
-                <img width="10px" height="10px" src="/Pictures/qa-btn.svg">   
+                    <svg width="10" height="10" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_20005128_12900)">
+                        <path d="M9.42092 2.7605L5.6001 6.58132L1.77928 2.7605L0.600098 3.93964L5.6001 8.93964L10.6001 3.93964L9.42092 2.7605Z" />
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_20005128_12900">
+                        <rect width="10" height="10" fill="white" transform="translate(0.600098 0.850098)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
                 </div>
                 <div class="qa-btn-box-clicked">
                     <img width="10px" height="6.18px" src="/Pictures/qa-clicked-btn.svg">      
@@ -603,7 +656,16 @@
                 services?
             </h3>
             <div class="qa-btn-box">
-              <img width="10px" height="10px" src="/Pictures/qa-btn.svg">
+                <svg width="10" height="10" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_20005128_12900)">
+                    <path d="M9.42092 2.7605L5.6001 6.58132L1.77928 2.7605L0.600098 3.93964L5.6001 8.93964L10.6001 3.93964L9.42092 2.7605Z" />
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_20005128_12900">
+                    <rect width="10" height="10" fill="white" transform="translate(0.600098 0.850098)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
               
             </div>
          </div>
@@ -617,7 +679,16 @@
                 easy for me to remember?
             </h3>
             <div class="qa-btn-box">
-              <img width="10px" height="10px" src="/Pictures/qa-btn.svg">
+                <svg width="10" height="10" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_20005128_12900)">
+                    <path d="M9.42092 2.7605L5.6001 6.58132L1.77928 2.7605L0.600098 3.93964L5.6001 8.93964L10.6001 3.93964L9.42092 2.7605Z" />
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_20005128_12900">
+                    <rect width="10" height="10" fill="white" transform="translate(0.600098 0.850098)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
               
             </div>
          </div>
@@ -631,7 +702,16 @@
                 password?
             </h3>
             <div class="qa-btn-box">
-              <img width="10px" height="10px" src="/Pictures/qa-btn.svg">
+                <svg width="10" height="10" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_20005128_12900)">
+                    <path d="M9.42092 2.7605L5.6001 6.58132L1.77928 2.7605L0.600098 3.93964L5.6001 8.93964L10.6001 3.93964L9.42092 2.7605Z" />
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_20005128_12900">
+                    <rect width="10" height="10" fill="white" transform="translate(0.600098 0.850098)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
               
             </div>
          </div>
@@ -697,7 +777,7 @@
         </div>
         <form class="email-wrapper">
             <div class="input-wrapper">
-                <input type="text" placeholder="Your email" class="input-with-icon">
+                <input type="email" placeholder="Your email" class="input-with-icon">
                     <svg class="email-icon" width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.861 3.66548H3.13907C2.72657 3.66548 2.3771 3.80871 2.09064 4.09517C1.80418 4.38162 1.66095 4.72537 1.66095 5.12642V13.9264C1.66095 14.3275 1.80418 14.6741 2.09064 14.9663C2.3771 15.2584 2.72657 15.4045 3.13907 15.4045H14.861C15.2734 15.4045 15.6229 15.2584 15.9094 14.9663C16.1958 14.6741 16.3391 14.3275 16.3391 13.9264V5.12642C16.3391 4.72537 16.1958 4.38162 15.9094 4.09517C15.6229 3.80871 15.2734 3.66548 14.861 3.66548ZM14.861 5.12642V5.50454L9.00001 10.0764L3.13907 5.50454V5.12642H14.861ZM3.13907 13.9264V7.36079L8.55314 11.5717C8.61043 11.6176 8.67918 11.6548 8.75939 11.6834C8.8396 11.7121 8.9198 11.7264 9.00001 11.7264C9.08022 11.7264 9.16043 11.7121 9.24064 11.6834C9.32085 11.6548 9.3896 11.6176 9.44689 11.5717L14.861 7.36079V13.9264H3.13907Z" fill="#9397AD"/>
                         </svg>
@@ -717,7 +797,7 @@
     <p>© 2024 Silicon. All rights reserved. 
         Credit MadrasThemes</p>
 </footer>
-
+</div>
 
 </body>
 </html>
