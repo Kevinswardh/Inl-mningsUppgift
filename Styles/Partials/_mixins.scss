@@ -45,6 +45,10 @@
       $gradient-end 100%
     );
   }
+  @mixin downloadBtnHeight-spaceing{
+    height: fit-content;
+    letter-spacing: 1px;
+  }
   // Mixin for top-left gradient - desktop only
 @mixin hero-gradient-background-top-left {
   background: radial-gradient(

@@ -94,7 +94,7 @@ Description:
   div {
     nav {
       @include flex-center();
-      gap: $gap-left-side; 
+      gap: $gap-25; 
       a {
         text-decoration: none;
         color: $text-color-black; 
@@ -103,7 +103,7 @@ Description:
         color: $text-color-black; 
       }
       #features {
-        margin-top: $margin-top-features; 
+        margin-top: $margin-top-4px; 
       }
     }
   }
@@ -135,7 +135,7 @@ Description:
 #right-side-header {
   @include flex-center(row);
   gap: $gap-16; 
-  padding: $default-padding $padding-16; 
+  padding: $default-padding $padding-16px; 
 }
 
 /********Toggle / Switch********/
@@ -270,24 +270,24 @@ background-color: $primary-color;
 /***Apple Button Self made***/   //The Next button is AI-made.
 .main-btn-wrapper{
   @include flex-center(center, center, column);
-  gap: 20px;
-  user-select: none;
+  @include pointer;
+  gap: $gap-20;
 }
 .download-btn {
   @include flex-center;
-  width: 100%;
-  height: 50px;
-  background-color: #131022;
+  @include pointer;
+  width: $width-100;
+  height: $height-50px;
+  background-color: $dark-button;
   max-width: 366.4px;
-  border-radius: 8px;
-  cursor: pointer;
+  border-radius: $normal-radius;
   .button-wrapper {
     @include flex-center;
-     margin-top: 0px;  
+     margin-top: 0;  
     .icon-fix {
       @include flex-center;
       position: relative;
-      width: 30px;
+      width: $width-30px;
       .apple-icon-top {
         position: absolute;
         top: -6px; 
@@ -311,38 +311,36 @@ background-color: $primary-color;
   border: $primary-color;
 }
 .download-text-apple-top{
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif;
-  font-size: 11px;
-  height: fit-content;
-  letter-spacing: 1px;
+  font-family: $apple-font;
+  font-size: $font-size-11;
+  @include downloadBtnHeight-spaceing;
 }
 .download-text-apple{
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  height: fit-content;
-  letter-spacing: 1px;
+  font-family: $apple-font;
+  font-size: $font-size-18;
+  font-weight: $font-weight-500;
+  @include downloadBtnHeight-spaceing;
 }
 
 /****Google button Ai-Generated with Builder.io Figma plugin****/
 
 .link-image {
-  margin-top: 4px;
+  margin-top: pxtorem(4);
   object-fit: contain;
   object-position: center;
-  width: 139px;
-  max-width: 100%;
+  width: pxtorem(139);
+  max-width: $width-100;
 }
 .btn-link{
- width: 100%;
+ width: $width-100;
  text-decoration: none;
 }
 .visually-hidden {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: pxtorem(1);
+  height: pxtorem(1);
   padding: 0;
-  margin: -1px;
+  margin: pxtorem(-1);
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
@@ -350,34 +348,32 @@ background-color: $primary-color;
 }
 
 //*******Discover more button*********//
-.discover-wrapper{
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  user-select: none;
-  width: 100%;
-  p{
-    color: #585C7B;
+.discover-wrapper {
+  margin-bottom: $margin-20;
+  @include flex-center();
+  gap: $gap-25;
+  user-select: $display-none;
+  width: $width-100;
+  p {
+    color: $paragraph-text-color;
   }
 }
 
-.discover-button{
-  fill:#3E4265;
-  width: 44px;
-  height: 44px;
-  border: none;
-  border-radius: 50%;;
-  background-color: #fff;
+.discover-button {
+  fill: $fill-discover-button;
+  width: $width-44px;
+  height: $height-44px;
+  border: $border-none;
+  border-radius: $proc50;
+  background-color: $white-background;
 }
 
 .discover-button:hover{
   background-color: $primary-color; 
-  color: white;
- stroke: white;
- fill: white;
- cursor: pointer;
+  color: $wi;
+  stroke: $wi;
+  fill: $wi;
+  @include pointer;
 }
 
 
@@ -387,119 +383,126 @@ background-color: $primary-color;
 ***********************************************/
 
 .brand-wrapper{
-  display: none;
+  display: $display-none;
   //Styles in Tablet/Desktop only
   .d-brand-1, .d-brand-2, .d-brand-3, .d-brand-4, .d-brand-5, .d-brand-6{
-    display: none;
+    display: $display-none;
    }
    .brand-1, .brand-2, .brand-3, .brand-4, .brand-5, .brand-6{
-    display: none;
+    display: $display-none;
    }
 }
 
 /***********************************************/
 /**********App Features section styles
 ***********************************************/
-.app-features-padding{
-  margin-top: -100px;
-  padding-top: 100px;
-  padding-bottom: 70px;
+.app-features-padding {
+  margin-top: $margin-top-negative-100px;
+  padding-top: $padding-top-100px;
+  padding-bottom: $padding-bottom-70px;
 }
-.app-features-grid{
+
+.app-features-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  padding: 5px;
-  margin-top: 30px;
+  padding: $padding-5px;
+  margin-top: $margin-top-30px;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  h2{
+  gap: $gap-20;
+
+  h2 {
     text-align: center;
     font-family: $font-family;
-    font-weight: 700;
-    font-size: 27.9px;
+    font-weight: $font-weight-700;
+    font-size: $font-size-27-9;
     margin: 0 auto;
   }
-  p{
+
+  p {
     text-align: center;
-    font-size: 18px;
-    color: #585C7B;
-    padding: 0px 25px;
-    max-width: 425px;
+    font-size: $font-size-18;
+    color: $paragraph-text-color;
+    padding: 0 $padding-25px;
+    max-width: $max-width-425px;
     font-family: $font-family;
     margin: 0 auto;
   }
 }
 
-.app-features-img{
-  display: none;
+.app-features-img {
+  display: $display-none;
 }
 
 
-.app-features-grid-item{
+.app-features-grid-item {
   display: flex;
   flex-direction: row;
-  padding: 20px;
-  gap: 20px;
+  padding: $padding-20px;
+  gap: $gap-20;
   align-items: center;
   justify-content: start;
-  img{
+
+  img {
     align-self: start;
   }
 
-  h3{
+  h3 {
     text-align: start;
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: $font-size-20;
+    margin-bottom: $margin-bottom-10px;
   }
-  p{
+
+  p {
     text-align: start;
     padding: 0;
-    font-size: 16px;
-    color: #585C7B;
+    font-size: $font-size-16;
+    color: $paragraph-text-color;
   }
-  &:hover{
-  transform: scale(1.1);
- box-shadow: 0px 0px 0px 0.2px hsla(0, 0%, 100%, 0.65);
- transition: all 0.1s ease-in;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: $box-shadow-header-65;
+    transition: all $transition-duration ease-in;
   }
 }
 /***********************************************/
 /**********how it works section styles
 ***********************************************/
-.background-widescreen-fixer-howitworks{
-  background-color: #F3F6FF;
-  padding-top: 1px;
-  padding-bottom: 50px;
-  margin-top: 20px;
+.background-widescreen-fixer-howitworks {
+  background-color: $background-howitworks;
+  padding-top: $padding-top-1px;
+  padding-bottom: $padding-bottom-50px;
+  margin-top: $margin-top-20px;
 }
-.howitworks-grid{
+.howitworks-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  justify-content: center;
-  align-items: center;
+  justify-content: $c;
+  align-items: $c;
   margin: 0 auto;
-  text-align: center;
-  max-width: 75rem;
-  gap: 30px;
-  
-  h3{
-    max-width: 250px;
-    font-weight:900;
-    font-size: 21.6;
+  text-align: $c;
+  max-width: $max-width-1200px; // Use the new variable
+  gap: $gap-30;
+
+  h3 {
+    max-width: $max-width-250px;
+    font-weight: $font-weight-900; // Add a variable for this if not defined
+    font-size: $font-size-21-6;
   }
-  p{
-    max-width: 415px;
-    font-size: 16px;
-    color: #585C7B;
+
+  p {
+    max-width: $max-width-415px;
+    font-size: $font-size-16;
+    color: $paragraph-text-color;
   }
 }
 .howitworks-img-wrapper{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: $c;
+  align-items: $c;
 }
 .howitworks-img-wrapper img:nth-child(1),
 .howitworks-img-wrapper img:nth-child(3) {

@@ -262,8 +262,8 @@ Description:
   flex-direction: row;
   text-align: center;
   font-weight: 700;
-  font-size: 34.1px;
-  max-width: 300px;
+  font-size: 2.13125rem;
+  max-width: 18.75rem;
 }
 .hero-section .hero-paragarph {
   display: flex;
@@ -271,10 +271,10 @@ Description:
   align-items: center;
   flex-direction: row;
   padding: 0;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #585C7B;
   line-height: 1.288;
-  height: 115.2px;
+  height: 7.2rem;
 }
 
 /***Apple Button Self made***/
@@ -283,10 +283,11 @@ Description:
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  gap: 1.25rem;
 }
 
 .download-btn {
@@ -294,19 +295,22 @@ Description:
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   width: 100%;
-  height: 50px;
+  height: 3.125rem;
   background-color: #131022;
   max-width: 366.4px;
-  border-radius: 8px;
-  cursor: pointer;
+  border-radius: 0.5rem;
 }
 .download-btn .button-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  margin-top: 0px;
+  margin-top: 0;
 }
 .download-btn .button-wrapper .icon-fix {
   display: flex;
@@ -314,7 +318,7 @@ Description:
   align-items: center;
   flex-direction: row;
   position: relative;
-  width: 30px;
+  width: 1.875rem;
 }
 .download-btn .button-wrapper .icon-fix .apple-icon-top {
   position: absolute;
@@ -336,16 +340,16 @@ Description:
 }
 
 .download-text-apple-top {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif;
-  font-size: 11px;
+  font-family: apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif;
+  font-size: 0.6875rem;
   height: -moz-fit-content;
   height: fit-content;
   letter-spacing: 1px;
 }
 
 .download-text-apple {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif;
-  font-size: 18px;
+  font-family: apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", sans-serif;
+  font-size: 1.125rem;
   font-weight: 500;
   height: -moz-fit-content;
   height: fit-content;
@@ -354,12 +358,12 @@ Description:
 
 /****Google button Ai-Generated with Builder.io Figma plugin****/
 .link-image {
-  margin-top: 4px;
+  margin-top: 0.25rem;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
-  width: 139px;
+  width: 8.6875rem;
   max-width: 100%;
 }
 
@@ -370,10 +374,10 @@ Description:
 
 .visually-hidden {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 0.0625rem;
+  height: 0.0625rem;
   padding: 0;
-  margin: -1px;
+  margin: -0.0625rem;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
@@ -381,11 +385,12 @@ Description:
 }
 
 .discover-wrapper {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  flex-direction: row;
+  gap: 1.5625rem;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -397,11 +402,11 @@ Description:
 
 .discover-button {
   fill: #3E4265;
-  width: 44px;
-  height: 44px;
+  width: 2.75rem;
+  height: 2.75rem;
   border: none;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .discover-button:hover {
@@ -410,6 +415,9 @@ Description:
   stroke: white;
   fill: white;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 /***********************************************/
@@ -429,34 +437,34 @@ Description:
 /**********App Features section styles
 ***********************************************/
 .app-features-padding {
-  margin-top: -100px;
-  padding-top: 100px;
-  padding-bottom: 70px;
+  margin-top: -6.25rem;
+  padding-top: 6.25rem;
+  padding-bottom: 4.375rem;
 }
 
 .app-features-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  padding: 5px;
-  margin-top: 30px;
+  padding: 0.3125rem;
+  margin-top: 1.875rem;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
 }
 .app-features-grid h2 {
   text-align: center;
   font-family: "Manrope", system-ui, sans-serif;
   font-weight: 700;
-  font-size: 27.9px;
+  font-size: 1.74375rem;
   margin: 0 auto;
 }
 .app-features-grid p {
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #585C7B;
-  padding: 0px 25px;
-  max-width: 425px;
+  padding: 0 1.5625rem;
+  max-width: 26.5625rem;
   font-family: "Manrope", system-ui, sans-serif;
   margin: 0 auto;
 }
@@ -468,8 +476,8 @@ Description:
 .app-features-grid-item {
   display: flex;
   flex-direction: row;
-  padding: 20px;
-  gap: 20px;
+  padding: 1.25rem;
+  gap: 1.25rem;
   align-items: center;
   justify-content: start;
 }
@@ -478,19 +486,19 @@ Description:
 }
 .app-features-grid-item h3 {
   text-align: start;
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 1.25rem;
+  margin-bottom: 0.625rem;
 }
 .app-features-grid-item p {
   text-align: start;
   padding: 0;
-  font-size: 16px;
+  font-size: 1rem;
   color: #585C7B;
 }
 .app-features-grid-item:hover {
   transform: scale(1.1);
   box-shadow: 0px 0px 0px 0.2px hsla(0, 0%, 100%, 0.65);
-  transition: all 0.1s ease-in;
+  transition: all 0.16s ease-in;
 }
 
 /***********************************************/
@@ -498,9 +506,9 @@ Description:
 ***********************************************/
 .background-widescreen-fixer-howitworks {
   background-color: #F3F6FF;
-  padding-top: 1px;
-  padding-bottom: 50px;
-  margin-top: 20px;
+  padding-top: 0.0625rem;
+  padding-bottom: 3.125rem;
+  margin-top: 1.25rem;
 }
 
 .howitworks-grid {
@@ -512,16 +520,16 @@ Description:
   margin: 0 auto;
   text-align: center;
   max-width: 75rem;
-  gap: 30px;
+  gap: 1.875rem;
 }
 .howitworks-grid h3 {
-  max-width: 250px;
+  max-width: 15.625rem;
   font-weight: 900;
-  font-size: 21.6;
+  font-size: 1.35rem;
 }
 .howitworks-grid p {
-  max-width: 415px;
-  font-size: 16px;
+  max-width: 25.9375rem;
+  font-size: 1rem;
   color: #585C7B;
 }
 
