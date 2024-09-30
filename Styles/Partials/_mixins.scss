@@ -2,9 +2,9 @@
 // Flexbox Centering
 @mixin flex-center($centerJ: center, $centerA: center, $flex-dir: row){
     display: flex;
-    flex-direction: $flex-dir;
     justify-content: $centerJ;
     align-items: $centerA;
+    flex-direction: $flex-dir;
     
 }
 @mixin flex-space-between($space-between: space-between, $center: center){
@@ -28,7 +28,14 @@
    }
   }
 
-  
+  @mixin pointer{
+    cursor: pointer;
+    user-select: none;
+  }
+  @mixin centerSelf{
+    align-self: center;
+    justify-self: center;
+  }
   // Gradient Background for Hero Section
   @mixin hero-gradient-background {
     background: radial-gradient(

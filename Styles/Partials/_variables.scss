@@ -1,24 +1,114 @@
 // Variables
 
-// Colors
+////////////////////////
+//****  Colors  *****///
 $primary-color: #6366f1;
 $secondary-color: rgba(218, 70, 239, 0.05);
 $dark-background: #0b0f19;
 $light-background: #ffffff;
+$white-background: #ffffff;
 $light-primary-color: lighten($primary-color, 5%);
 $gradient-start: rgba(99, 102, 241, 0.1);
 $gradient-middle: rgba(218, 70, 239, 0.05);
 $gradient-end: rgba(19, 16, 34, 0.01);
+$text-color-black: black;
+$text-color-features: #33354D;
+$color-toggle-background: #9397ad; 
+$paragraph-text-color: #585C7B;
 
-// Fonts
+////////////////////////
+//****Typography*****///
+
+//Fonts
 $font-family: "Manrope", system-ui, sans-serif;
 
+//Font sizes
+$font-size-16: pxtorem(16); 
+$font-size-16: pxtorem(18); 
+$font-size-20-8: pxtorem(20.8);
+$font-size-34-1: pxtorem(34.1);
+
+//Font weights
+$font-weight-400: 400;
+$font-weight-700: 700;
+$font-weight-800: 800;
+
+////////////////////////
+//****  Spacing *****///
+$default-margin: 0;
+$default-padding: 0;
+
+//Padding
+$padding-16: pxtorem(16);
+
+//Margins
+$margin-20: pxtorem(20);
+$margin-top-features: pxtorem(4);
+$margin-left-7: pxtorem(7);
+$margin-top-large: pxtorem(100);
+
+//Gaps
+$gap-left-side: pxtorem(25);
+$gap-16: pxtorem(16);
+
+////////////////////////
+//****   Sizes  *****///
+//Unversal converters
+ $px3: pxtorem(3px);
+//Widths
+   //Procentage
+    $width-100: 100%;
+
+   //Pixels
+    $width-30px: pxtorem(30);
+    $width-300px: pxtorem(300);
+   //Misc widths
+    $max-section-width: pxtorem(1298); // Sections max width
+    $toggle-switch-width: pxtorem(46);
+
+
+//Heights
+   //Procentage
+    $height-100: 100%;
+
+   //Pixels
+    $height-36px: pxtorem(36);
+    $height-115-2px: pxtorem(115.2);
+   //Misc widths
+    $header-height: pxtorem(52);
+    $toggle-switch-height: pxtorem(24);
+
+//Misc sizes circles/rectagles etc
+$toggle-knob-diameter: pxtorem(18);
+
+////////////////////////
+//****  Borders *****///
+$border-none: none;
+$proc50: 50%;
+
+////////////////////////
+//****  Shadows *****///
+$box-shadow-header: 0px 0px 3px 0px hsl(0, 0%, 70%);
+$focus-border: 1px solid $text-color-black; 
+$box-shadow-toggle: 0px 8px 18px -8px rgba($primary-color, 0.9);
+
+////////////////////////
+//****Transitions****///
+$transition-duration: 0.16s;
+$toggle-knob-transition: left 0.3s ease;
+
+////////////////////////
+//***Miscellaneous***///
+
+//Box sizing
+$box-sizing-border: border-box;
+$box-sizing-content: content-box;
+
+//Display variables
+$display-none: none;
+$display-block: block; 
+
 // Dimensions
-$header-height: 52px;
-$toggle-switch-width: 46px;
-$toggle-switch-height: 24px;
-$toggle-knob-diameter: 18px;
 
-
-//Dark-mode
-$is-dark-mode: false;
+//Z-index
+$z-index-top-header: 999;

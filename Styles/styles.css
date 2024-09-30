@@ -21,7 +21,7 @@ Description:
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Manrope", sans-serif;
+  font-family: "Manrope", system-ui, sans-serif;
   transition: background-color 0.16s;
 }
 
@@ -30,11 +30,11 @@ Description:
   width: fit-content;
   max-width: 81.125rem;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 6.25rem;
 }
 
 .margin-20 {
-  margin: 20px;
+  margin: 1.25rem;
 }
 
 .desktop-only {
@@ -55,7 +55,7 @@ Description:
 #top-header {
   z-index: 999;
   width: 100%;
-  height: 52px;
+  height: 3.25rem;
   box-shadow: 0px 0px 3px 0px hsl(0, 0%, 70%);
   position: sticky;
   top: 0;
@@ -70,14 +70,14 @@ Description:
   padding: 0 1rem;
   max-width: 81.125rem;
   margin: 0 auto;
-  max-height: 52px;
+  max-height: 3.25rem;
 }
 
 #left-side-header {
   display: flex;
-  flex-direction: row;
-  justify-content: row;
+  justify-content: center;
   align-items: center;
+  flex-direction: row;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -87,10 +87,10 @@ Description:
 }
 #left-side-header div nav {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  flex-direction: row;
+  gap: 1.5625rem;
 }
 #left-side-header div nav a {
   text-decoration: none;
@@ -100,7 +100,7 @@ Description:
   color: black;
 }
 #left-side-header div nav #features {
-  margin-top: 4px;
+  margin-top: 0.25rem;
 }
 
 #left-side-header:visited {
@@ -128,17 +128,17 @@ Description:
 /*** Right side header ***/
 #right-side-header {
   display: flex;
-  flex-direction: row;
   justify-content: row;
   align-items: center;
+  flex-direction: row;
   gap: 1rem;
   padding: 0 1rem;
 }
 
 /********Toggle / Switch********/
 .toggle-switch {
-  width: 46px;
-  height: 24px;
+  width: 2.875rem;
+  height: 1.5rem;
   background-color: #9397ad;
   border-radius: 25px;
   position: relative;
@@ -153,8 +153,8 @@ Description:
   opacity: 0;
 }
 .toggle-switch .toggle-knob {
-  width: 18px;
-  height: 18px;
+  width: 1.125rem;
+  height: 1.125rem;
   background-color: #ffffff;
   border-radius: 50%;
   position: absolute;
@@ -163,7 +163,7 @@ Description:
   transition: left 0.3s ease;
 }
 .toggle-switch input:checked + .toggle-knob {
-  left: calc(46px - 18px - 6px);
+  left: calc(2.875rem - 1.125rem - 6px);
 }
 
 #darkmode-checkbox {
@@ -182,39 +182,43 @@ Description:
 
 /***Menu button Mobile***/
 .hamburger-menu {
-  width: 30px;
-  height: 36px;
+  width: 1.875rem;
+  height: 2.25rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   cursor: pointer;
-  align-items: center;
-  justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   border: none;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .hamburger-menu span {
   display: block;
-  width: 22px;
-  height: 2px;
+  width: 1.375rem;
+  height: 0.125rem;
   background-color: #333;
 }
 
 .hamburger-menu span:first-child {
-  margin-top: 6px;
+  margin-top: 0.375rem;
 }
 
 .hamburger-menu span:nth-child(2) {
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 0.375rem;
+  margin-bottom: 0.375rem;
 }
 
 .hamburger-menu span:last-child {
-  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
 }
 
 .signin-btn-link {
   display: none;
+  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -234,28 +238,28 @@ Description:
   height: 100%;
   font-family: "Manrope", system-ui, sans-serif;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-bottom: 10px;
+  flex-direction: row;
+  padding-bottom: 0.625rem;
   display: grid;
   grid-template-rows: auto;
   gap: 40px;
   padding-top: 27.02px;
 }
 .hero-section h1, .hero-section .hero-paragarph {
-  justify-self: center;
   align-self: center;
+  justify-self: center;
   width: 100%;
 }
 .hero-section *:nth-child(2) {
-  max-width: 361.41px;
+  max-width: 22.588125rem;
 }
 .hero-section h1 {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   text-align: center;
   font-weight: 700;
   font-size: 34.1px;
@@ -263,9 +267,9 @@ Description:
 }
 .hero-section .hero-paragarph {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   padding: 0;
   font-size: 18px;
   color: #585C7B;
@@ -276,10 +280,10 @@ Description:
 /***Apple Button Self made***/
 .main-btn-wrapper {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 20px;
-  align-items: center;
-  justify-content: center;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -287,9 +291,9 @@ Description:
 
 .download-btn {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   width: 100%;
   height: 50px;
   background-color: #131022;
@@ -301,13 +305,14 @@ Description:
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0px;
   flex-direction: row;
+  margin-top: 0px;
 }
 .download-btn .button-wrapper .icon-fix {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
   position: relative;
   width: 30px;
 }

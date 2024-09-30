@@ -11,9 +11,9 @@ Description:
 // Import Fonts
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap');
 // Import variables and mixins
+@import 'Partials/functions';
 @import 'Partials/variables';
 @import 'Partials/mixins';
-@import 'Partials/functions';
 
 
 /////////////////
@@ -29,29 +29,34 @@ Description:
 ***********************************************/
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Manrope', sans-serif;
-  transition: background-color 0.16s;
+  margin: $default-margin;
+  padding: $default-padding;
+  box-sizing: $box-sizing-border;
+  font-family: $font-family;
+  transition: background-color $transition-duration;
 }
-.section-max-width{
+
+.section-max-width {
   width: fit-content;
-  max-width: rem(1298);
-  margin: 0 auto;
-  margin-top: 100px;
+  max-width: $max-section-width;
+  margin: $default-margin auto;
+  margin-top: $margin-top-large;
 }
+
 .margin-20{
-  margin: 20px;
+  margin: $margin-20;
 }
-.desktop-only{ // Default is flex on desktop
-  display: none;
+
+ .desktop-only { // Default is flex on desktop
+  display: $display-none;
 }
-.desktop-only-block{ 
-  display: none;
+
+.desktop-only-block {
+  display: $display-none;
 }
-.mobile-tablet-only{
- display: block;
+
+.mobile-tablet-only {
+  display: $display-block;
 }
 
 // html {
@@ -62,11 +67,10 @@ Description:
 /***************Top Header styles
 ***********************************************/
 #top-header {
-  z-index: 999;
-  width: 100%;
+  z-index: $z-index-top-header;
+  width: $width-100;
   height: $header-height;
-  box-shadow: 0px 0px 3px 0px hsl(0, 0%, 70%);
-  // background-color: $light-background;
+  box-shadow: $box-shadow-header; 
   @include sticky-header;
   background-color: var(--header-background);
   // Dark theme for top header
@@ -75,60 +79,54 @@ Description:
 
 .wrapper {
   @include flex-space-between(space-between, center);
-  padding: 0 rem(16);
-  max-width: rem(1298);
+  padding: 0 pxtorem(16); 
+  max-width: $max-section-width; 
   margin: 0 auto;
-  max-height: $header-height;
-
+  max-height: $header-height; 
 }
 
 #left-side-header {
-  @include flex-center(row);
+  @include flex-center();
   user-select: none;
   cursor: pointer;
   text-decoration: none;
-  color: black;
-  div{
-    nav{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 25px;
-      a{
-       text-decoration: none;
-       color: black;
-       
+  color: $text-color-black; 
+  div {
+    nav {
+      @include flex-center();
+      gap: $gap-left-side; 
+      a {
+        text-decoration: none;
+        color: $text-color-black; 
       }
-      a:visited{
-        color: black;
+      a:visited {
+        color: $text-color-black; 
       }
-      #features{
-        margin-top: 4px;
+      #features {
+        margin-top: $margin-top-features; 
       }
     }
   }
 }
-#left-side-header:visited{
-  color: black;
 
+#left-side-header:visited {
+  color: $text-color-black; 
 }
-#features{
-  display: none;
-  margin-left: rem(7);
-  font-size: rem(16);
-  font-weight: 400;
-  font-family: $font-family;
-  color: #33354D;
- align-self: center;
- justify-self: center;
 
+#features {
+  display: $display-none; 
+  margin-left: $margin-left-7;
+  font-size: $font-size-16;
+  font-weight: $font-weight-400;
+  font-family: $font-family; 
+  color: $text-color-features; 
+  @include centerSelf;
 }
 
 #logo-name {
-  margin-left: rem(7);
-  font-size: rem(20.8);
-  font-weight: 800;
+  margin-left: $margin-left-7;
+  font-size: $font-size-20-8;
+  font-weight: $font-weight-800;
   font-family: $font-family;
  
 }
@@ -136,97 +134,90 @@ Description:
 /*** Right side header ***/
 #right-side-header {
   @include flex-center(row);
-  gap: rem(16);
-  padding: 0 rem(16);
+  gap: $gap-16; 
+  padding: $default-padding $padding-16; 
 }
 
 /********Toggle / Switch********/
 .toggle-switch {
   width: $toggle-switch-width;
-  height: $toggle-switch-height;
-  background-color: #9397ad;
-  border-radius: 25px;
+  height: $toggle-switch-height; 
+  background-color: $color-toggle-background; 
+  border-radius: 25px; 
   position: relative;
-  box-shadow: 0px 8px 18px -8px rgba($primary-color, 0.9);
+  box-shadow: $box-shadow-toggle; 
   cursor: pointer;
   display: inline-block;
   user-select: none;
+
   input {
     opacity: 0;
   }
-
   .toggle-knob {
-    width: $toggle-knob-diameter;
-    height: $toggle-knob-diameter;
-    background-color: $light-background;
-    border-radius: 50%;
+    width: $toggle-knob-diameter; 
+    height: $toggle-knob-diameter; 
+    background-color: $light-background; 
+    border-radius: $proc50;
     position: absolute;
     top: 3px;
     left: 3px;
-    transition: left 0.3s ease;
+    transition: $toggle-knob-transition;
   }
-
-
   input:checked + .toggle-knob {
     left: calc(#{$toggle-switch-width} - #{$toggle-knob-diameter} - 6px);
-    
   }
+}
 
+#darkmode-checkbox {
+  height: $height-100;
+  width: $width-100;
 }
-#darkmode-checkbox{
-  height: 100%;
-  width: 100%;
-}
+
 .toggle-switch:has(input:focus-visible) {
-  border:  1px solid black;
-  box-sizing: content-box;
-
+  border:  $focus-border;
+  box-sizing: $box-sizing-content;
 }
 
 .toggle-switch:has(input:checked) {
 background-color: $primary-color;
-
 }
 
 
 /***Menu button Mobile***/
 .hamburger-menu {
-    width: 30px;
-    height: 36px;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    border:none;
-    background-color: #fff;
+    width:  $width-30px;
+    height: $height-36px;
+    @include flex-center(center, center, column);
+    @include pointer;
+    border: $border-none;
+    background-color: $white-background;
   }
   
   .hamburger-menu span {
     display: block;
-    width: 22px;
-    height: 2px;
+    width: pxtorem(22);
+    height: pxtorem(2);
     background-color: #333;
    
   }
   
   .hamburger-menu span:first-child {
-    margin-top: 6px;
+    margin-top: pxtorem(6);
   }
   
   .hamburger-menu span:nth-child(2) {
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-top: pxtorem(6);
+    margin-bottom: pxtorem(6);
   }
   
   .hamburger-menu span:last-child {
-    margin-bottom: 6px;
+    margin-bottom: pxtorem(6);
   }
   
 
   .signin-btn-link{
     display: none;
-    user-select: none;
+    @include pointer;
   }
 
 /***********************************************/
@@ -235,65 +226,51 @@ background-color: $primary-color;
 
 .background-widescreen-fixer-hero{
   @include hero-gradient-background;
-  width: 100%;
+  width: $width-100;
   height: auto;
-  
-
 }
+
 //**Universal Section properties**//
 .hero-section {
   overflow: hidden;
-  height: 100%;
+  height: $height-100;
   font-family: $font-family;
-  @include flex-center;
-//@include dark-theme($dark-background);
- 
-  padding-bottom: 10px; //Line fixer
-    display: grid;
-    grid-template-rows: auto;
-    gap: 40px;
-   
-    padding-top: 27.02px;
-    
+  @include flex-center();
+  padding-bottom: pxtorem(10); //Line fixer
+  display: grid;
+  grid-template-rows: auto;
+  gap: 40px; 
+  padding-top: 27.02px;
     //////Nested universal
-    h1, .hero-paragarph {
- 
-    justify-self: center;
-    align-self: center;   
-      
-    width: 100%;         
-      
-  }
-
-
-  *:nth-child(2){
-    max-width: 361.41px;
-  }
-   h1{
-    @include flex-center; 
-    text-align: center; 
-    font-weight: 700;
-    font-size: 34.1px;
-    max-width: 300px; 
-   }
-   .hero-paragarph{
-    @include flex-center;   
-   padding: 0;
-    font-size: 18px;
-    color: #585C7B;
-    line-height: 1.288;
-    height: 115.2px;
-   }
+      h1, .hero-paragarph {
+      @include centerSelf;  
+      width: $width-100;         
+    }
+    *:nth-child(2){
+      max-width: pxtorem(361.41);
+    }
+    h1{
+      @include flex-center; 
+      text-align: center; 
+      font-weight: $font-weight-700;
+      font-size: $font-size-34-1;
+      max-width: $width-300px; 
+    }
+    .hero-paragarph{
+      @include flex-center;   
+      padding: 0;
+      font-size: $font-size-18;
+      color: $paragraph-text-color;
+      line-height: 1.288;
+      height: $height-115-2px;
+    }
   
 }
 
 /***Apple Button Self made***/   //The Next button is AI-made.
 .main-btn-wrapper{
-  display: flex;
-  flex-direction: column;
+  @include flex-center(center, center, column);
   gap: 20px;
-  align-items: center;
-  justify-content: center;
   user-select: none;
 }
 .download-btn {
@@ -305,17 +282,10 @@ background-color: $primary-color;
   border-radius: 8px;
   cursor: pointer;
   .button-wrapper {
-     display: flex;
-    
-     justify-content: center;
-     align-items: center;
-     margin-top: 0px;
-     
-     flex-direction: row;
+    @include flex-center;
+     margin-top: 0px;  
     .icon-fix {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex-center;
       position: relative;
       width: 30px;
       .apple-icon-top {

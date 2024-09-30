@@ -27,7 +27,7 @@
        max-width: 100%;
       }
       .wrapper{
-        max-width: rem(1298);
+        max-width: pxtorem(1298);
       }
       #features{
             display: block;
@@ -85,7 +85,7 @@
             grid-template-rows: 160px 15px 1fr 1fr 1fr 2fr auto;
             position: relative; 
             width: 100%;
-            max-width: rem(1298);
+            max-width: pxtorem(1298);
             min-width: 60rem;
             gap: 0;
             column-gap: 30px;
@@ -157,7 +157,7 @@
 .brand-wrapper{
   transform: scale(1);
   width: 100%;
-  max-width: rem(1298);
+  max-width: pxtorem(1298);
   padding-left: 0;
   padding-right: 0;
   gap: 10px;
